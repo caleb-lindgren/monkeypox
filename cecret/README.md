@@ -5,7 +5,7 @@
 - [most helpful tutorial for installing/using cecret](https://www.protocols.io/view/cecret-workflow-for-sars-cov-2-assembly-and-lineag-by72pzqe.html)
 - [cecret github](https://github.com/UPHL-BioNGS/Cecret)
 
-### installing cecret
+### installing cecret locally
 
 ```
 git clone https://github.com/StaPH-B/staphb_toolkit.git
@@ -21,6 +21,20 @@ this is the code I used
 ```
 staphb-tk cecret -c cecret.config
 ```
+
+### Docker Progress
+
+Build the container image using this code
+```
+docker build -t staphb_toolkit .
+```
+Run the container using this code. Apparently it's to connect the host docker socket to the kernel's. I can't remember if this part works yet though.
+```
+docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock staphb_toolkit bash
+```
+
+For some reason the `cd` and `python3` commands of the cecret installation aren't running automatically in the first code block in the Dockerfile, take a look at that. 
+
 
 ### future
 
