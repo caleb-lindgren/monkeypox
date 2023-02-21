@@ -7,19 +7,23 @@ RUN apt-get update && \
 # Install staphb_toolkit
 RUN pip install urllib3==1.26.7 && \
     pip install requests==2.26.0 && \
-    git clone https://github.com/StaPH-B/staphb_toolkit.git && \ 
-    cd staphb_toolkit/packaging/ && \ 
-    pwd && \ 
-    python3 setup.py install --user && \ 
-    export PATH=$PATH:$(pwd)
+    git clone https://github.com/StaPH-B/staphb_toolkit.git
+
+WORKDIR staphb_toolkit/packaging
+
+RUN python3 setup.py install --user 
+
+WORKDIR ../../
+
+ENV PATH="${PATH}:/staphb_toolkit"
 
 # Copy the pipeline code into the container
 # COPY nextflow_pipeline.nf /app/nextflow_pipeline.nf
 
 # Set the working directory
-WORKDIR /app
+# WORKDIR /app
 
 # Start the pipeline
 #CMD ["nextflow", "run", "nextflow_pipeline.nf"]
 
-CMD ["staphb-tk"]
+# CMD ["staphb-tk"]
