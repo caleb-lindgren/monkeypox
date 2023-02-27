@@ -1,0 +1,48 @@
+2023-02-13 09:52:20	-	sick_lalande	-	91b3f6e632c4f8016059b6980df4c7c8	60d17e56-3e6e-4b1e-944e-6e4650d1cd93	nextflow run pipeline.nf
+2023-02-13 09:52:46	-	pedantic_kalam	-	fb25a8352bfd9e94f7207d29bd6bbcc5	f8f2b4df-cdda-4aa0-be7e-5a1b9a4dbf0a	nextflow run pipeline.nf
+2023-02-13 09:52:55	-	extravagant_plateau	-	fb25a8352bfd9e94f7207d29bd6bbcc5	85796368-5677-40c0-aff1-6199491f661b	nextflow run pipeline.nf
+2023-02-13 09:53:31	-	wise_wescoff	-	6c1912a396851d96dd353f369055ada6	5081167f-8c12-4d1d-851f-aaf73a7a121a	nextflow pipeline.nf
+2023-02-13 09:54:07	-	boring_ramanujan	-	0acfc95529c6e24923e6ce4347969e17	30032f62-d841-4206-8c55-82d031a1a435	nextflow pipeline.nf
+2023-02-13 09:54:19	-	friendly_woese	-	6c1912a396851d96dd353f369055ada6	401989d8-58ab-4845-b51c-c89bab1c09d4	nextflow pipeline.nf
+2023-02-13 09:55:55	-	goofy_franklin	-	a7c6386c4fbbf5bbdb81bcccc610da59	95af3e5e-dc62-4f57-a14b-4e0668a495da	nextflow pipeline.nf
+2023-02-13 09:58:07	-	prickly_edison	-	05b1874c9305556655ee6c617665bd39	e454b2e8-7acf-46ac-8549-f7ee70484dc8	nextflow pipeline.nf
+2023-02-13 09:58:21	-	agitated_franklin	-	138c1e52eb316aaf76d7391ed7740ee9	47b48f4a-d92e-4ebe-8e15-31af78e0f58f	nextflow pipeline.nf
+2023-02-13 09:58:37	-	adoring_crick	-	01ae0406f78ef4e57ba9991c1fb5dadf	b33ae173-9978-45ce-a44b-25551d0091f2	nextflow pipeline.nf
+2023-02-13 09:59:47	-	elated_raman	-	70446e0574a0b7850cc93d0250eaa26a	0b651003-7a2c-4986-9834-d2136177bfb6	nextflow pipeline.nf
+2023-02-13 10:01:26	-	compassionate_meninsky	-	4859682b50f7253b10aa22617cdcb66e	b5aea1ac-febc-44e9-9e1a-9f1f5d7a442b	nextflow pipeline.nf
+2023-02-13 10:02:33	-	sad_plateau	-	4859682b50f7253b10aa22617cdcb66e	102ab986-1f9b-4ad8-a558-c5764f128078	nextflow pipeline.nf
+2023-02-13 10:03:13	-	confident_golick	-	a5c5f72b6b810e05b4fc4fda309e65c3	b23e7613-f66f-4ac6-8cbf-b80cb8d55a1c	nextflow pipeline.nf
+2023-02-13 10:03:24	-	serene_rosalind	-	aacbc4d0b7b1b6cf4e46782f2386927d	c4efa0a2-9d4a-43cf-86a4-c809dd13de03	nextflow pipeline.nf
+2023-02-13 10:03:32	-	big_swartz	-	a5c5f72b6b810e05b4fc4fda309e65c3	359a1d1d-edbd-4384-b0b6-9d025c4e2244	nextflow pipeline.nf
+2023-02-13 10:05:35	2.5s	furious_stonebraker	OK	e61bd183fe4e7101bdc59fdd17a3510c	f7f79b4f-c82b-442b-a684-56632f242b02	nextflow run pipeline.nf
+2023-02-13 10:06:19	-	amazing_meitner	-	04eacc79abd38ee3ee2cc52e7c340caf	0a8d046f-f5b6-47c9-9ca5-9d36f4b27410	nextflow run pipeline.nf
+2023-02-13 10:07:32	1.5s	festering_euler	OK	26ac49d8b7eaddc0d0cc7c2aedc11636	8eb03a44-8708-4e68-8ca2-666aafe47914	nextflow run pipeline.nf
+2023-02-13 10:07:44	1.8s	focused_feynman	OK	26ac49d8b7eaddc0d0cc7c2aedc11636	c7231fa6-30c9-487b-ba63-767997fb6942	nextflow run pipeline.nf
+2023-02-13 10:07:58	1.8s	soggy_gilbert	OK	26ac49d8b7eaddc0d0cc7c2aedc11636	9573711b-d6f5-4f33-8877-ffa44e5fd411	nextflow run pipeline.nf
+2023-02-13 10:08:15	1.7s	astonishing_pasteur	OK	31e283a3f41ce33264236415a86a7c8c	6f4f2293-0921-42e8-8208-a8993fce2f6a	nextflow run pipeline.nf
+2023-02-13 10:08:29	2.1s	soggy_cray	OK	79f4c5894d795b7b7b5ac202f936ed7d	1edb8b20-447e-461c-8110-9a5ac35534ac	nextflow run pipeline.nf
+2023-02-13 10:08:39	1.1s	scruffy_lovelace	OK	79f4c5894d795b7b7b5ac202f936ed7d	b8616815-ec58-4e1a-a9ca-c05266e95032	nextflow run pipeline.nf
+2023-02-13 10:09:38	1.2s	distracted_almeida	OK	fd57398657fcbd390bb8ff6697edf233	62800b81-2188-46a6-903e-0741e778b726	nextflow run pipeline.nf
+2023-02-13 10:10:07	1.8s	voluminous_brahmagupta	OK	aa09f226af024c870052476274d1517c	94b5bcd8-f6fa-445e-b965-f53ce5c5ff36	nextflow run pipeline.nf
+2023-02-13 10:10:53	1.4s	shrivelled_agnesi	OK	aa09f226af024c870052476274d1517c	9c5edd47-5551-4625-a801-98e60db87738	nextflow run pipeline.nf
+2023-02-13 10:12:02	1.9s	peaceful_hugle	OK	d38aeb77b9757674c93e57f1255ba669	202a9998-efa7-4ee5-8f16-0ccaa9017940	nextflow run pipeline.nf
+2023-02-13 10:12:39	1.9s	distraught_goldberg	OK	a606c08cacfb84510900164bc0980278	16fa7b87-a4b0-4d52-ad86-2845ab63c7af	nextflow run pipeline.nf
+2023-02-13 10:13:08	1.6s	stoic_wing	OK	ffd9f8b6a859e17a2aad1f24e985bf25	25d00e3a-294d-4d8e-aff8-9cc37e90c8dd	nextflow run pipeline.nf
+2023-02-13 10:13:26	2s	nasty_austin	OK	378d27e329bb54ca644bb918755773cb	4c3ba487-7152-43d8-8ecc-f0034e9426c3	nextflow run pipeline.nf
+2023-02-13 10:15:42	-	sleepy_mayer	-	438249d6f14986de25c3d6f9546d4a2d	79e7548d-0a13-449e-941e-f388c664d46a	nextflow run pipeline.nf
+2023-02-13 10:16:11	2.8s	stoic_elion	OK	9b67ac14ad7bc4db1b2d1632a332167f	c94d828a-28c6-46c7-a999-948a8f6e6aee	nextflow run pipeline.nf
+2023-02-13 10:17:12	2s	distracted_liskov	ERR	4114aa4df8786f91e95f991253e51d5c	01a40fbc-2666-4c8d-855c-bf219e311930	nextflow run pipeline.nf
+2023-02-13 10:18:07	2.4s	admiring_euler	ERR	81b36b14101d3d502e43481639d21737	adeff33d-da69-40a3-9b69-364ccea55f56	nextflow run pipeline.nf
+2023-02-13 10:20:30	2.8s	irreverent_ritchie	OK	acb30a27f512a85dfc2d6c71e6735a8a	75be00da-03d3-4821-b7a6-c40fc56f58f4	nextflow run pipeline.nf
+2023-02-13 10:22:35	9.1s	nauseous_yonath	ERR	44ab40772f8cd16df2059b154b5759df	f4e2143f-3ebd-4e21-b799-f6f56e59ea7c	nextflow run Cecret/main.nf
+2023-02-13 10:25:39	2.2s	distraught_hamilton	OK	d6db2b11837f62f8ba2536e303d0858a	f41883d0-26f7-47d5-96b3-1fb7b46c9bc0	nextflow run pipeline.nf
+2023-02-13 10:26:54	1.7s	gloomy_franklin	OK	5b919395207bc497d8f8734b75296d5f	fb16a720-00b4-4a65-b4d6-abada058355f	nextflow run pipeline.nf
+2023-02-13 10:27:52	2.8s	astonishing_shockley	ERR	ff341a3a6865844897e5d639d1627a98	0ee2d702-37f1-4734-8d80-15ec05c0a198	nextflow run pipeline.nf
+2023-02-13 10:28:13	2.7s	tender_thompson	OK	16aafb07eaf6b56a6f26cdb7ad0f76f6	a72c26cf-96a0-4196-976e-8619de099450	nextflow run pipeline.nf
+2023-02-13 10:29:14	-	friendly_tuckerman	-	44ab40772f8cd16df2059b154b5759df	3288d1fe-f8fa-48fc-a516-049c9813516f	nextflow run new.nf
+2023-02-15 10:10:27	13.1s	compassionate_feynman	ERR	d191242b077b0bd5d7449065de531ea17acedcfa	010f1b5a-d995-48f2-a22d-769556543f9a	nextflow run UPHL-BioNGS/Cecret -c cecret.config
+2023-02-21 09:32:24	11.9s	drunk_stonebraker	ERR	d191242b077b0bd5d7449065de531ea17acedcfa	715b1044-ff81-4f26-8999-4d9f50fa46c0	nextflow run -c /Users/zacheliason/.local/lib/python3.8/site-packages/staphb_toolkit-2.0.1-py3.8.egg/staphb_toolkit/config/docker.config -r master UPHL-BioNGS/Cecret -c cecret.config
+2023-02-21 09:41:57	13s	peaceful_shockley	ERR	d191242b077b0bd5d7449065de531ea17acedcfa	1ccba941-fd9e-4ec9-b813-8bcda3babd15	nextflow run -c /Users/zacheliason/.local/lib/python3.8/site-packages/staphb_toolkit-2.0.1-py3.8.egg/staphb_toolkit/config/docker.config -r master UPHL-BioNGS/Cecret -c cecret.config
+2023-02-21 09:44:52	10.5s	stupefied_mendel	ERR	d191242b077b0bd5d7449065de531ea17acedcfa	8e985b0b-8a65-45e9-8b2c-ae48ee0c367a	nextflow run -c /Users/zacheliason/.local/lib/python3.8/site-packages/staphb_toolkit-2.0.1-py3.8.egg/staphb_toolkit/config/docker.config -r master UPHL-BioNGS/Cecret -c cecret.config
+2023-02-21 09:49:20	47s	modest_avogadro	ERR	d191242b077b0bd5d7449065de531ea17acedcfa	751ca932-caf9-48b2-9332-acca790b6581	nextflow run -c /Users/zacheliason/.local/lib/python3.8/site-packages/staphb_toolkit-2.0.1-py3.8.egg/staphb_toolkit/config/docker.config -r master UPHL-BioNGS/Cecret -c cecret.config
+2023-02-27 09:51:58	2m 33s	confident_gautier	ERR	d191242b077b0bd5d7449065de531ea17acedcfa	fd8870a5-bd9d-4e15-8ea8-b442ee313a53	nextflow run -c /Users/zacheliason/.local/lib/python3.8/site-packages/staphb_toolkit-2.0.1-py3.8.egg/staphb_toolkit/config/docker.config -r master UPHL-BioNGS/Cecret -c cecret.config

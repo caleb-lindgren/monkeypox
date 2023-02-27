@@ -1,0 +1,356 @@
+Feb-21 09:41:54.198 [main] DEBUG nextflow.cli.Launcher - $> nextflow run -c /Users/zacheliason/.local/lib/python3.8/site-packages/staphb_toolkit-2.0.1-py3.8.egg/staphb_toolkit/config/docker.config -r master UPHL-BioNGS/Cecret -c cecret.config
+Feb-21 09:41:54.361 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 22.10.6
+Feb-21 09:41:54.406 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/Users/zacheliason/plugins; core-plugins: nf-amazon@1.11.3,nf-azure@0.14.2,nf-codecommit@0.1.2,nf-console@1.0.4,nf-ga4gh@1.0.4,nf-google@1.4.5,nf-tower@1.5.6,nf-wave@0.5.3
+Feb-21 09:41:54.423 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Feb-21 09:41:54.425 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Feb-21 09:41:54.429 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Feb-21 09:41:54.447 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Feb-21 09:41:54.469 [main] DEBUG nextflow.scm.ProviderConfig - Using SCM config path: /Users/zacheliason/scm
+Feb-21 09:41:55.521 [main] DEBUG nextflow.scm.AssetManager - Git config: /Users/zacheliason/assets/UPHL-BioNGS/Cecret/.git/config; branch: master; remote: origin; url: https://github.com/UPHL-BioNGS/Cecret.git
+Feb-21 09:41:55.560 [main] DEBUG nextflow.scm.RepositoryFactory - Found Git repository result: [RepositoryFactory]
+Feb-21 09:41:55.576 [main] DEBUG nextflow.scm.AssetManager - Git config: /Users/zacheliason/assets/UPHL-BioNGS/Cecret/.git/config; branch: master; remote: origin; url: https://github.com/UPHL-BioNGS/Cecret.git
+Feb-21 09:41:56.676 [main] INFO  nextflow.scm.AssetManager - NOTE: Your local project version looks outdated - a different revision is available in the remote repository [1928809ea0]
+Feb-21 09:41:56.695 [main] DEBUG nextflow.config.ConfigBuilder - Found config base: /Users/zacheliason/assets/UPHL-BioNGS/Cecret/nextflow.config
+Feb-21 09:41:56.699 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /Users/zacheliason/.local/lib/python3.8/site-packages/staphb_toolkit-2.0.1-py3.8.egg/staphb_toolkit/config/docker.config
+Feb-21 09:41:56.699 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /Users/zacheliason/Documents/School/winter_2023/BIO465/test_mpx/new_folder/cecret.config
+Feb-21 09:41:56.700 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/zacheliason/assets/UPHL-BioNGS/Cecret/nextflow.config
+Feb-21 09:41:56.700 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/zacheliason/.local/lib/python3.8/site-packages/staphb_toolkit-2.0.1-py3.8.egg/staphb_toolkit/config/docker.config
+Feb-21 09:41:56.700 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/zacheliason/Documents/School/winter_2023/BIO465/test_mpx/new_folder/cecret.config
+Feb-21 09:41:56.728 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Feb-21 09:41:57.248 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Feb-21 09:41:57.295 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Feb-21 09:41:57.525 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declararion
+Feb-21 09:41:57.526 [main] INFO  nextflow.cli.CmdRun - Launching `https://github.com/UPHL-BioNGS/Cecret` [peaceful_shockley] DSL2 - revision: d191242b07 [master]
+Feb-21 09:41:57.527 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Feb-21 09:41:57.527 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Feb-21 09:41:57.531 [main] DEBUG nextflow.secret.LocalSecretsProvider - Secrets store: /Users/zacheliason/secrets/store.json
+Feb-21 09:41:57.537 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@da4cf09] - activable => nextflow.secret.LocalSecretsProvider@da4cf09
+Feb-21 09:41:57.620 [main] DEBUG nextflow.Session - Session UUID: 1ccba941-fd9e-4ec9-b813-8bcda3babd15
+Feb-21 09:41:57.620 [main] DEBUG nextflow.Session - Run name: peaceful_shockley
+Feb-21 09:41:57.620 [main] DEBUG nextflow.Session - Executor pool size: 4
+Feb-21 09:41:57.636 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=12; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Feb-21 09:41:57.665 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 22.10.6 build 5843
+  Created: 23-01-2023 23:20 UTC (16:20 MDT)
+  System: Mac OS X 12.6.2
+  Runtime: Groovy 3.0.13 on Java HotSpot(TM) 64-Bit Server VM 17.0.1+12-LTS-39
+  Encoding: UTF-8 (UTF-8)
+  Process: 16081@ZachsMacbook [10.37.26.184]
+  CPUs: 4 - Mem: 16 GB (1.6 GB) - Swap: 3 GB (1.1 GB)
+Feb-21 09:41:57.681 [main] DEBUG nextflow.Session - Work-dir: /Users/zacheliason/Documents/School/winter_2023/BIO465/test_mpx/new_folder/work [Mac OS X]
+Feb-21 09:41:57.703 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Feb-21 09:41:57.716 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Feb-21 09:41:57.791 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Feb-21 09:41:57.807 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 5; maxThreads: 1000
+Feb-21 09:41:57.895 [main] DEBUG nextflow.Session - Session start
+Feb-21 09:41:59.332 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Feb-21 09:41:59.368 [main] INFO  nextflow.script.BaseScript - Currently using the Cecret workflow for use with amplicon Illumina library prep on MiSeq with a corresponding reference genome.
+
+Feb-21 09:41:59.368 [main] INFO  nextflow.script.BaseScript - Author: Erin Young
+Feb-21 09:41:59.369 [main] INFO  nextflow.script.BaseScript - email: eriny@utah.gov
+Feb-21 09:41:59.369 [main] INFO  nextflow.script.BaseScript - Version: v.3.5.20230201
+Feb-21 09:41:59.370 [main] INFO  nextflow.script.BaseScript - 
+Feb-21 09:41:59.379 [main] INFO  nextflow.script.BaseScript - The maximum number of CPUS used in this workflow is 8
+Feb-21 09:41:59.381 [main] INFO  nextflow.script.BaseScript - Using the subworkflow for Monkeypox Virus
+Feb-21 09:42:07.707 [main] INFO  nextflow.script.BaseScript - The files and directory for results is cecret
+Feb-21 09:42:07.708 [main] INFO  nextflow.script.BaseScript - A table summarizing results will be created: cecret/cecret_results.csv
+
+Feb-21 09:42:07.849 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:fasta_prep` matches process fasta_prep
+Feb-21 09:42:07.863 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-21 09:42:07.863 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-21 09:42:07.872 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Feb-21 09:42:07.879 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=4; memory=16 GB; capacity=4; pollInterval=100ms; dumpInterval=5m
+Feb-21 09:42:07.998 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:seqyclean` matches process cecret:seqyclean
+Feb-21 09:42:08.003 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-21 09:42:08.003 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-21 09:42:08.063 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:maxcpus` matches labels `maxcpus` for process with name cecret:bwa
+Feb-21 09:42:08.063 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:bwa` matches process cecret:bwa
+Feb-21 09:42:08.066 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-21 09:42:08.067 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-21 09:42:08.078 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:maxcpus` matches labels `maxcpus` for process with name cecret:sort
+Feb-21 09:42:08.078 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:samtools_.*` matches process cecret:sort
+Feb-21 09:42:08.082 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-21 09:42:08.082 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-21 09:42:08.102 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:ivar_.*` matches process cecret:ivar_trim
+Feb-21 09:42:08.105 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-21 09:42:08.105 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-21 09:42:08.123 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:ivar_.*` matches process cecret:ivar
+Feb-21 09:42:08.123 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:ivar_consensus` matches process cecret:ivar
+Feb-21 09:42:08.125 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-21 09:42:08.125 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-21 09:42:08.145 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:fastqc` matches process qc:fastqc
+Feb-21 09:42:08.147 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-21 09:42:08.147 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-21 09:42:08.166 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:maxcpus` matches labels `maxcpus` for process with name qc:kraken2
+Feb-21 09:42:08.167 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:kraken2` matches process qc:kraken2
+Feb-21 09:42:08.170 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-21 09:42:08.170 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-21 09:42:08.183 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:samtools_.*` matches process qc:samtools_flagstat
+Feb-21 09:42:08.185 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-21 09:42:08.185 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-21 09:42:08.195 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:samtools_.*` matches process qc:samtools_depth
+Feb-21 09:42:08.196 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-21 09:42:08.196 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-21 09:42:08.204 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:samtools_.*` matches process qc:samtools_coverage
+Feb-21 09:42:08.205 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-21 09:42:08.207 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-21 09:42:08.217 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:samtools_.*` matches process qc:samtools_stats
+Feb-21 09:42:08.218 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-21 09:42:08.218 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-21 09:42:08.226 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:samtools_.*` matches process qc:samtools_intial_stats
+Feb-21 09:42:08.226 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:samtools_.*` matches process qc:samtools_intial_stats
+Feb-21 09:42:08.228 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-21 09:42:08.228 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-21 09:42:08.237 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:samtools_.*` matches process qc:samtools_ampliconstats
+Feb-21 09:42:08.239 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-21 09:42:08.239 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-21 09:42:08.246 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:samtools_.*` matches process qc:samtools_plot_ampliconstats
+Feb-21 09:42:08.249 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-21 09:42:08.249 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-21 09:42:08.259 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:bcftools_variants` matches process qc:bcftools_variants
+Feb-21 09:42:08.261 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-21 09:42:08.261 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-21 09:42:08.281 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:ivar_.*` matches process qc:ivar_variants
+Feb-21 09:42:08.283 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-21 09:42:08.283 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-21 09:42:08.292 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:bedtools_multicov` matches process qc:bedtools_multicov
+Feb-21 09:42:08.293 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-21 09:42:08.293 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-21 09:42:08.313 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:medcpus` matches labels `medcpus` for process with name mpx:vadr
+Feb-21 09:42:08.313 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:vadr` matches process mpx:vadr
+Feb-21 09:42:08.314 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-21 09:42:08.315 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-21 09:42:08.324 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:medcpus` matches labels `medcpus` for process with name mpx:nextclade
+Feb-21 09:42:08.324 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:nextclade` matches process mpx:nextclade
+Feb-21 09:42:08.326 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-21 09:42:08.326 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-21 09:42:08.358 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:multiqc.*` matches process multiqc_combine
+Feb-21 09:42:08.358 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-21 09:42:08.358 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-21 09:42:08.405 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:summary` matches process summary
+Feb-21 09:42:08.406 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-21 09:42:08.407 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-21 09:42:08.445 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:combine_results` matches process combine_results
+Feb-21 09:42:08.446 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-21 09:42:08.446 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-21 09:42:08.455 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: fasta_prep, mafft, qc:samtools_flagstat, download, cecret:seqyclean, samtools_intial_stats, markdup, mpx:nextclade, freyja_aggregate, qc:samtools_coverage, bedtools_multicov, qc:samtools_intial_stats, sort, cecret:bwa, bwa, ivar, ivar_trim, freyja, samtools_flagstat, qc:bedtools_multicov, qc:ivar_variants, nextclade, qc:samtools_ampliconstats, ampliconclip, cecret:ivar, vadr, cecret:sort, combine_results, samtools_sort, minimap2, samtools_ampliconclip, mpx:vadr, nextalign, samtools_coverage, samtools_filter, samtools_markdup, qc:fastqc, qc:samtools_stats, ivar_consensus, seqyclean, samtools_stats, snpdists, fastp, summary, bcftools_variants, qc:kraken2, multiqc_combine, samtools_depth, ivar_variants, qc:samtools_depth, cecret:ivar_trim, qc:samtools_plot_ampliconstats, filter, kraken2, fastqc, iqtree2, pangolin, qc:bcftools_variants, samtools_ampliconstats, samtools_plot_ampliconstats
+Feb-21 09:42:08.463 [main] DEBUG nextflow.Session - Igniting dataflow network (41)
+Feb-21 09:42:08.473 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /Users/zacheliason/Documents/School/winter_2023/BIO465/test_mpx/new_folder/reads/; pattern: *_R{1,2}*.{fastq,fastq.gz,fq,fq.gz}; options: [:]
+Feb-21 09:42:08.473 [PathVisitor-2] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /Users/zacheliason/Documents/School/winter_2023/BIO465/test_mpx/new_folder/single_reads/; pattern: *.{fastq,fastq.gz,fq,fq.gz}; options: [:]
+Feb-21 09:42:08.477 [PathVisitor-3] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /Users/zacheliason/Documents/School/winter_2023/BIO465/test_mpx/new_folder/fastas/; pattern: *{.fa,.fasta,.fna}; options: [type:file]
+Feb-21 09:42:08.478 [PathVisitor-4] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /Users/zacheliason/Documents/School/winter_2023/BIO465/test_mpx/new_folder/multifastas/; pattern: *{.fa,.fasta,.fna}; options: [type:file]
+Feb-21 09:42:08.479 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - No such file: /Users/zacheliason/Documents/School/winter_2023/BIO465/test_mpx/new_folder/reads/ -- Skipping visit
+Feb-21 09:42:08.479 [PathVisitor-4] DEBUG nextflow.file.PathVisitor - No such file: /Users/zacheliason/Documents/School/winter_2023/BIO465/test_mpx/new_folder/multifastas/ -- Skipping visit
+Feb-21 09:42:08.481 [PathVisitor-3] DEBUG nextflow.file.PathVisitor - No such file: /Users/zacheliason/Documents/School/winter_2023/BIO465/test_mpx/new_folder/fastas/ -- Skipping visit
+Feb-21 09:42:08.483 [PathVisitor-6] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /Users/zacheliason/Documents/School/winter_2023/BIO465/test_mpx/new_folder/reads/; pattern: *{1,2}*.{fastq,fastq.gz,fq,fq.gz}; options: [syntax:glob, type:file]
+Feb-21 09:42:08.484 [PathVisitor-6] DEBUG nextflow.file.PathVisitor - No such file: /Users/zacheliason/Documents/School/winter_2023/BIO465/test_mpx/new_folder/reads/ -- Skipping visit
+Feb-21 09:42:08.491 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > fasta_prep
+Feb-21 09:42:08.495 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > cecret:seqyclean
+Feb-21 09:42:08.495 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > cecret:bwa
+Feb-21 09:42:08.495 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > cecret:sort
+Feb-21 09:42:08.495 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > cecret:ivar_trim
+Feb-21 09:42:08.495 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > cecret:ivar
+Feb-21 09:42:08.495 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > qc:fastqc
+Feb-21 09:42:08.495 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > qc:kraken2
+Feb-21 09:42:08.495 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > qc:samtools_flagstat
+Feb-21 09:42:08.495 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > qc:samtools_depth
+Feb-21 09:42:08.495 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > qc:samtools_coverage
+Feb-21 09:42:08.495 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > qc:samtools_stats
+Feb-21 09:42:08.496 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > qc:samtools_intial_stats
+Feb-21 09:42:08.496 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > qc:samtools_ampliconstats
+Feb-21 09:42:08.496 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > qc:samtools_plot_ampliconstats
+Feb-21 09:42:08.496 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > qc:bcftools_variants
+Feb-21 09:42:08.505 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > qc:ivar_variants
+Feb-21 09:42:08.506 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > qc:bedtools_multicov
+Feb-21 09:42:08.506 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > mpx:vadr
+Feb-21 09:42:08.507 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > mpx:nextclade
+Feb-21 09:42:08.513 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > multiqc_combine
+Feb-21 09:42:08.514 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > summary
+Feb-21 09:42:08.516 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > combine_results
+Feb-21 09:42:08.516 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Feb-21 09:42:08.516 [main] DEBUG nextflow.Session - Session await
+Feb-21 09:42:08.790 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-21 09:42:08.793 [Task submitter] INFO  nextflow.Session - [84/ab1724] Submitted process > qc:fastqc (SRR23322653)
+Feb-21 09:42:08.823 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-21 09:42:08.827 [Task submitter] INFO  nextflow.Session - [e9/f3cd10] Submitted process > cecret:seqyclean (SRR23322653)
+Feb-21 09:42:09.210 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: qc:fastqc (SRR23322653); status: COMPLETED; exit: 125; error: -; workDir: /Users/zacheliason/Documents/School/winter_2023/BIO465/test_mpx/new_folder/work/84/ab17241f31475a87b6b80ad19fad7d]
+Feb-21 09:42:09.230 [Task monitor] INFO  nextflow.processor.TaskProcessor - [84/ab1724] NOTE: Process `qc:fastqc (SRR23322653)` terminated with an error exit status (125) -- Execution is retried (1)
+Feb-21 09:42:09.238 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: cecret:seqyclean (SRR23322653); status: COMPLETED; exit: 125; error: -; workDir: /Users/zacheliason/Documents/School/winter_2023/BIO465/test_mpx/new_folder/work/e9/f3cd1038b04280743932475c6d401f]
+Feb-21 09:42:09.249 [Task monitor] INFO  nextflow.processor.TaskProcessor - [e9/f3cd10] NOTE: Process `cecret:seqyclean (SRR23322653)` terminated with an error exit status (125) -- Execution is retried (1)
+Feb-21 09:42:09.260 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-21 09:42:09.260 [Task submitter] INFO  nextflow.Session - [9b/00713d] Re-submitted process > qc:fastqc (SRR23322653)
+Feb-21 09:42:09.276 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-21 09:42:09.277 [Task submitter] INFO  nextflow.Session - [3b/01600b] Re-submitted process > cecret:seqyclean (SRR23322653)
+Feb-21 09:42:09.662 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: qc:fastqc (SRR23322653); status: COMPLETED; exit: 125; error: -; workDir: /Users/zacheliason/Documents/School/winter_2023/BIO465/test_mpx/new_folder/work/9b/00713db03dbe6ad92cc5693c16a6fd]
+Feb-21 09:42:09.675 [Task monitor] ERROR nextflow.processor.TaskProcessor - Error executing process > 'qc:fastqc (SRR23322653)'
+
+Caused by:
+  Process `qc:fastqc (SRR23322653)` terminated with an error exit status (125)
+
+Command executed:
+
+  mkdir -p fastqc logs/qc:fastqc
+  log=logs/qc:fastqc/SRR23322653.1ccba941-fd9e-4ec9-b813-8bcda3babd15.log
+  
+  # time stamp + capturing tool versions
+  date > $log
+  fastqc --version >> $log
+  
+  fastqc        --outdir fastqc       --threads 1       SRR23322653.fastq       | tee -a $log
+  
+  zipped_fastq=($(ls fastqc/*fastqc.zip) "")
+  
+  raw_1=$(unzip -p ${zipped_fastq[0]} */fastqc_data.txt | grep "Total Sequences" | awk '{ print $3 }' )
+  raw_2=NA
+  if [ -f "${zipped_fastq[1]}" ] ; then raw_2=$(unzip -p fastqc/*fastqc.zip */fastqc_data.txt | grep "Total Sequences" | awk '{ print $3 }' ) ; fi
+  
+  if [ -z "$raw_1" ] ; then raw_1="0" ; fi
+  if [ -z "$raw_2" ] ; then raw_2="0" ; fi
+
+Command exit status:
+  125
+
+Command output:
+  (empty)
+
+Command error:
+  docker: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?.
+  See 'docker run --help'.
+
+Work dir:
+  /Users/zacheliason/Documents/School/winter_2023/BIO465/test_mpx/new_folder/work/9b/00713db03dbe6ad92cc5693c16a6fd
+
+Tip: you can replicate the issue by changing to the process work dir and entering the command `bash .command.run`
+Feb-21 09:42:09.681 [Task monitor] DEBUG nextflow.Session - Session aborted -- Cause: Process `qc:fastqc (SRR23322653)` terminated with an error exit status (125)
+Feb-21 09:42:09.714 [Task monitor] DEBUG nextflow.Session - The following nodes are still active:
+[process] cecret:bwa
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] cecret:sort
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] cecret:ivar_trim
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] cecret:ivar
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] qc:kraken2
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] qc:samtools_flagstat
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] qc:samtools_depth
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] qc:samtools_coverage
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] qc:samtools_stats
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] qc:samtools_intial_stats
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] qc:samtools_ampliconstats
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] qc:samtools_plot_ampliconstats
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] qc:bcftools_variants
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] qc:ivar_variants
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] qc:bedtools_multicov
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] mpx:vadr
+  status=ACTIVE
+  port 0: (value) OPEN  ; channel: fasta
+  port 1: (cntrl) -     ; channel: $
+
+[process] mpx:nextclade
+  status=ACTIVE
+  port 0: (value) OPEN  ; channel: fasta
+  port 1: (cntrl) -     ; channel: $
+
+[process] multiqc_combine
+  status=ACTIVE
+  port 0: (value) bound ; channel: fastqc
+  port 1: (value) bound ; channel: fastp
+  port 2: (value) OPEN  ; channel: seqyclean
+  port 3: (value) OPEN  ; channel: seqyclean2
+  port 4: (value) OPEN  ; channel: kraken2
+  port 5: (value) bound ; channel: pangolin
+  port 6: (value) OPEN  ; channel: ivar
+  port 7: (value) OPEN  ; channel: samtools_stats
+  port 8: (value) OPEN  ; channel: samtools_flagstat
+  port 9: (cntrl) -     ; channel: $
+
+[process] summary
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] combine_results
+  status=ACTIVE
+  port 0: (value) OPEN  ; channel: nextclade
+  port 1: (queue) OPEN  ; channel: pangolin
+  port 2: (value) OPEN  ; channel: vadr
+  port 3: (queue) OPEN  ; channel: freyja
+  port 4: (queue) OPEN  ; channel: seqyclean
+  port 5: (queue) OPEN  ; channel: seqyclean_single
+  port 6: (value) OPEN  ; channel: summary
+  port 7: (queue) OPEN  ; channel: combine_results
+  port 8: (cntrl) -     ; channel: $
+
+Feb-21 09:42:09.718 [main] DEBUG nextflow.Session - Session await > all processes finished
+Feb-21 09:42:09.719 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Feb-21 09:42:09.722 [main] INFO  nextflow.script.BaseScript - Pipeline completed at: 2023-02-21T09:42:09.719500-07:00
+Feb-21 09:42:09.722 [main] INFO  nextflow.script.BaseScript - A summary of results can be found in a comma-delimited file: cecret/summary/combined_summary.csv
+Feb-21 09:42:09.723 [main] INFO  nextflow.script.BaseScript - Execution status: failed
+Feb-21 09:42:09.728 [main] WARN  n.processor.TaskPollingMonitor - Killing running tasks (1)
+Feb-21 09:42:09.751 [Actor Thread 17] DEBUG nextflow.file.SortFileCollector - FileCollector temp dir not removed: null
+Feb-21 09:42:09.752 [Actor Thread 38] DEBUG nextflow.file.SortFileCollector - FileCollector temp dir not removed: null
+Feb-21 09:42:09.755 [main] DEBUG n.executor.local.LocalTaskHandler - Unable to kill cecret:seqyclean (SRR23322653) -- command: kill -TERM 16197; exit: 1 
+ bash: line 0: kill: (16197) - No such process
+
+Feb-21 09:42:09.755 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: cecret:seqyclean (SRR23322653); status: COMPLETED; exit: 125; error: -; workDir: /Users/zacheliason/Documents/School/winter_2023/BIO465/test_mpx/new_folder/work/3b/01600b3152e1741ae08a9f07debc34]
+Feb-21 09:42:09.762 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=4; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=2; abortedCount=0; succeedDuration=0ms; failedDuration=1.5s; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=2; peakCpus=2; peakMemory=0; ]
+Feb-21 09:42:09.785 [Actor Thread 7] DEBUG nextflow.util.CacheHelper - Hash asset file sha-256: /Users/zacheliason/assets/UPHL-BioNGS/Cecret/bin/combine_results.py
+Feb-21 09:42:09.891 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Feb-21 09:42:09.970 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

@@ -1,0 +1,49 @@
+====================Parameters========================
+Version: 1.10.09 (2018-10-16)
+--------------------Basic parameters--------------------
+Provided data file(s) : 
+SE: SRR23322653.fastq
+Adapters trimming: YES. 
+Vector screening: NO
+Contaminants screening: YES. File_of_contaminants: /Adapters_plus_PhiX_174.fasta
+K-mer size for contaminants: 15
+Quality trimming: YES
+Maximum error: 20
+Maximum error at ends: 20
+Poly A/T trimming: NO
+Duplicates screening: NO
+--------------------Output files--------------------
+Output prefix: seqyclean/SRR23322653_cln
+Report file: seqyclean/SRR23322653_cln_SE_Report.tsv
+SE file: seqyclean/SRR23322653_cln_SE.fastq.gz
+Single-end reads: 
+--------------------Other parameters--------------------
+Minimum read length to accept: 25
+New to old-style Illumina headers: NO
+Old-style Illumina: NO
+Q-value: 33
+====================Starting the process====================
+Parsing screening file /Adapters_plus_PhiX_174.fasta
+Running the Illumina cleaning process...
+Processing files: SRR23322653.fastq
+====================Summary Statistics====================
+SE reads analyzed: 103062, Bases:13792027
+Found ->
+Adapters: 13, 0.0126138%
+# of reads with contaminants: 4, 0.00388116%
+Reads left trimmed ->
+By quality: 0
+Average left trim length: 0 bp
+Reads right trimmed ->
+By adapter: 13
+By quality: 99456
+Average right trim length: 1 bp
+SE reads discarded: 3606
+By contaminants: 4
+By read length: 3602
+----------------------Summary for SE----------------------
+Reads kept: 99456, 96.5011%, Bases: 13529568, 98.097%
+Average trimmed length: 136.036 bp
+====================Done cleaning====================
+Program finished.
+Elapsed time = 7.744110e+01 seconds

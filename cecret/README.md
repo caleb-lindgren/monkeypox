@@ -17,10 +17,14 @@ export PATH=$PATH:$(pwd)
 
 ### running cecret
 
-this is the code I used 
+I've been able to get Cecret to run inside the `test_dir_cecret` by installing Cecret using the lines of code above and then running the following:
 ```
 staphb-tk cecret -c cecret.config
 ```
+
+Cecret looks for a few folders to find the reference and read files. The MPXV reference file is found in `fastas` and the reads are located in `reads` and single_reads` depending on whether they're paired.
+
+I'm working on getting everything working on Docker too (see below)
 
 ### Docker Progress
 
