@@ -1,0 +1,44 @@
+Unable to find image 'staphb/fastqc:0.11.9' locally
+0.11.9: Pulling from staphb/fastqc
+72d9f18d70f3: Pulling fs layer
+c02bb3269068: Pulling fs layer
+9a8621bbc988: Pulling fs layer
+4f4fb700ef54: Pulling fs layer
+72d9f18d70f3: Waiting
+c02bb3269068: Waiting
+9a8621bbc988: Waiting
+72d9f18d70f3: Verifying Checksum
+72d9f18d70f3: Download complete
+9a8621bbc988: Verifying Checksum
+9a8621bbc988: Download complete
+4f4fb700ef54: Verifying Checksum
+4f4fb700ef54: Download complete
+c02bb3269068: Verifying Checksum
+c02bb3269068: Download complete
+72d9f18d70f3: Pull complete
+c02bb3269068: Pull complete
+9a8621bbc988: Pull complete
+4f4fb700ef54: Pull complete
+Digest: sha256:265df678e12dd404eaf461b833a3eefbd55a9ae7531d5ea6f6b72b77e4708fb8
+Status: Downloaded newer image for staphb/fastqc:0.11.9
+Started analysis of SRR23322653.fastq
+Approx 5% complete for SRR23322653.fastq
+Approx 10% complete for SRR23322653.fastq
+Approx 15% complete for SRR23322653.fastq
+Approx 20% complete for SRR23322653.fastq
+Approx 25% complete for SRR23322653.fastq
+Approx 30% complete for SRR23322653.fastq
+Approx 35% complete for SRR23322653.fastq
+Approx 40% complete for SRR23322653.fastq
+Approx 45% complete for SRR23322653.fastq
+Approx 50% complete for SRR23322653.fastq
+Approx 55% complete for SRR23322653.fastq
+Approx 60% complete for SRR23322653.fastq
+Approx 65% complete for SRR23322653.fastq
+Approx 70% complete for SRR23322653.fastq
+Approx 75% complete for SRR23322653.fastq
+Approx 80% complete for SRR23322653.fastq
+Approx 85% complete for SRR23322653.fastq
+Approx 90% complete for SRR23322653.fastq
+Approx 95% complete for SRR23322653.fastq
+Analysis complete for SRR23322653.fastq

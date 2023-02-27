@@ -1,0 +1,48 @@
+Unable to find image 'quay.io/biocontainers/pandas:1.1.5' locally
+1.1.5: Pulling from biocontainers/pandas
+a3ed95caeb02: Pulling fs layer
+b0dc45cd432d: Pulling fs layer
+9466b3513669: Pulling fs layer
+ddd482ea7b54: Pulling fs layer
+4d69f833b9d8: Pulling fs layer
+e7c454e5167d: Pulling fs layer
+e38092b005c0: Pulling fs layer
+f879b42dfe2b: Pulling fs layer
+724547082715: Pulling fs layer
+a3ed95caeb02: Waiting
+b0dc45cd432d: Waiting
+4d69f833b9d8: Waiting
+9466b3513669: Waiting
+ddd482ea7b54: Waiting
+e38092b005c0: Waiting
+724547082715: Waiting
+f879b42dfe2b: Waiting
+a3ed95caeb02: Verifying Checksum
+a3ed95caeb02: Download complete
+a3ed95caeb02: Pull complete
+b0dc45cd432d: Verifying Checksum
+b0dc45cd432d: Download complete
+9466b3513669: Verifying Checksum
+9466b3513669: Download complete
+ddd482ea7b54: Verifying Checksum
+ddd482ea7b54: Download complete
+4d69f833b9d8: Verifying Checksum
+4d69f833b9d8: Download complete
+e7c454e5167d: Verifying Checksum
+e7c454e5167d: Download complete
+b0dc45cd432d: Pull complete
+e38092b005c0: Verifying Checksum
+e38092b005c0: Download complete
+9466b3513669: Pull complete
+f879b42dfe2b: Download complete
+ddd482ea7b54: Pull complete
+4d69f833b9d8: Pull complete
+e7c454e5167d: Pull complete
+e38092b005c0: Pull complete
+f879b42dfe2b: Pull complete
+724547082715: Verifying Checksum
+724547082715: Download complete
+724547082715: Pull complete
+Digest: sha256:1c60bdf246eb4d64f3afda7e8ec9de9eb9110c5a781882bc560f37a76023e4a3
+Status: Downloaded newer image for quay.io/biocontainers/pandas:1.1.5
+grep: consensus/MPXV_reference.consensus.fa: No such file or directory

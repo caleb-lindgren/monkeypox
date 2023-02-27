@@ -1,5 +1,19 @@
 FROM ubuntu:latest
 
+# Create new user and group
+RUN groupadd -g 999 docker && \
+    useradd -r -u 999 -g docker docker
+
+# Set Docker host
+# ENV DOCKER_HOST=unix:///var/run/docker.sock
+ENV DOCKER_HOST=/var/run/docker.sock
+
+# Add Docker binary to PATH
+ENV PATH="/usr/bin/docker:${PATH}"
+
+# Add new user to Docker group
+RUN usermod -a -G docker docker
+
 # Install dependencies
 RUN apt-get update && \
     apt-get install -y python3 python3-pip git

@@ -1,0 +1,36 @@
+Unable to find image 'staphb/seqyclean:1.10.09' locally
+1.10.09: Pulling from staphb/seqyclean
+34667c7e4631: Pulling fs layer
+d18d76a881a4: Pulling fs layer
+119c7358fbfc: Pulling fs layer
+2aaf13f3eff0: Pulling fs layer
+c4a6a6288759: Pulling fs layer
+277de7a4c930: Pulling fs layer
+f1499a8a81f9: Pulling fs layer
+2aaf13f3eff0: Waiting
+c4a6a6288759: Waiting
+277de7a4c930: Waiting
+f1499a8a81f9: Waiting
+119c7358fbfc: Verifying Checksum
+119c7358fbfc: Download complete
+d18d76a881a4: Verifying Checksum
+d18d76a881a4: Download complete
+2aaf13f3eff0: Verifying Checksum
+2aaf13f3eff0: Download complete
+34667c7e4631: Verifying Checksum
+34667c7e4631: Download complete
+f1499a8a81f9: Verifying Checksum
+f1499a8a81f9: Download complete
+277de7a4c930: Verifying Checksum
+277de7a4c930: Download complete
+c4a6a6288759: Verifying Checksum
+c4a6a6288759: Download complete
+34667c7e4631: Pull complete
+d18d76a881a4: Pull complete
+119c7358fbfc: Pull complete
+2aaf13f3eff0: Pull complete
+c4a6a6288759: Pull complete
+277de7a4c930: Pull complete
+f1499a8a81f9: Pull complete
+Digest: sha256:0f7d965481d936e3b17ecb130eb00183091f2c33075ee8ef792da7b89598f6ef
+Status: Downloaded newer image for staphb/seqyclean:1.10.09
