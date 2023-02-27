@@ -7,6 +7,22 @@
 
 ### installing cecret locally
 
+[These instructions](https://developers.google.com/earth-engine/guides/python_install-conda) were the best I found for installing pip using conda on Linux.
+```
+wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh
+bash ~/miniconda.sh -b -p
+rm ~/miniconda.sh
+source $HOME/miniconda3/bin/activate
+
+# (to verify installation success)
+conda --help
+
+# (to add conda to PATH)
+printf '\n# add path to conda\nexport PATH="$HOME/miniconda3/bin:$PATH"\n' >> ~/.bashrc
+```
+
+Once you have pip installed you should be able to run the following.
+
 ```
 pip install urllib3==1.26.7 --user
 pip install requests==2.26.0 --user
