@@ -5,3 +5,5 @@ __pychache__/
 dist/
 build/
 .DS_Store
+nextclade/nextclade
+
