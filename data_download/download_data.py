@@ -1,8 +1,27 @@
+import os
 import pandas as pd
 import re
 import subprocess
+import sys
 
 from xml.etree import ElementTree
+
+# Read in command line args
+
+if len(sys.argv) < 2:
+    raise ValueError("Please specify a download path.")
+
+if len(sys.argv) > 3:
+    raise ValueError("Too many arguments passed.")
+
+download_path = sys.argv[1]
+if not os.path.isdir(download_path):
+    raise ValueError(f"Download directory '{download_path}' does not exist. Please create it first.")
+
+if len(sys.argv) == 3:
+    num_download = int(sys.argv[2])
+else:
+    num_download = None
 
 # Execute a series of bash commands using pipes to query the SRA for the accession numbers we want
 
@@ -30,16 +49,22 @@ root = ElementTree.fromstring(xml_fixed)
 for run in root.iter("Run"):
     accs.append(run.attrib.get("acc"))
 
+# Determine how many to download
+if num_download is None:
+    num_download = len(accs)
+
 # Use pandas to export so we can send all the accessions to prefetch at once
 accs_filename = "accs.tsv"
 
 pd.Series(accs).\
 sort_values().\
+iloc[:num_download].\
 to_csv(accs_filename, sep="\t", index=False, header=False)
 
 print("Accessions parsed.\nDownloading compressed data files using prefetch...")
 
 # Use prefetch to download the compressed data for those accession numbers
-prefetch_ret = subprocess.run(f"prefetch -p --option-file {accs_filename} -O sra_data/", shell=True)
+prefetch_ret = subprocess.run(f"prefetch -p --option-file {accs_filename} -O {download_path}", shell=True)
 
-# TODO: Add command line args for number to download (default all) and save location (require, create and tell user if doesn't exist)
+# Remove the temporary file of accessions
+os.remove(accs_filename)
