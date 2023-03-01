@@ -14,8 +14,7 @@ bash ~/miniconda.sh -b -p
 rm ~/miniconda.sh
 source $HOME/miniconda3/bin/activate
 
-# (to verify installation success)
-conda --help
+conda install pip
 
 # (to add conda to PATH)
 printf '\n# add path to conda\nexport PATH="$HOME/miniconda3/bin:$PATH"\n' >> ~/.bashrc
@@ -31,6 +30,15 @@ git clone https://github.com/StaPH-B/staphb_toolkit.git
 cd staphb_toolkit/packaging/
 python3 setup.py install --user
 cd ../
+export PATH=$PATH:$(pwd)
+```
+
+### Initializing on the supercomputer every time (after the first installation)
+
+Once everything is installed you should just need to add staphb-tk to your PATH again
+
+```
+cd staphb_toolkit/
 export PATH=$PATH:$(pwd)
 ```
 
