@@ -7,7 +7,26 @@
 
 ### installing cecret locally
 
+[These instructions](https://developers.google.com/earth-engine/guides/python_install-conda) were the best I found for installing pip using conda on Linux.
 ```
+wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh
+bash ~/miniconda.sh -b -p
+rm ~/miniconda.sh
+source $HOME/miniconda3/bin/activate
+
+# (to verify installation success)
+conda --help
+
+# (to add conda to PATH)
+printf '\n# add path to conda\nexport PATH="$HOME/miniconda3/bin:$PATH"\n' >> ~/.bashrc
+```
+
+Once you have pip installed you should be able to run the following.
+
+```
+pip install urllib3==1.26.7 --user
+pip install requests==2.26.0 --user
+
 git clone https://github.com/StaPH-B/staphb_toolkit.git
 cd staphb_toolkit/packaging/
 python3 setup.py install --user
@@ -17,10 +36,14 @@ export PATH=$PATH:$(pwd)
 
 ### running cecret
 
-this is the code I used 
+I've been able to get Cecret to run inside the `test_dir_cecret` by installing Cecret using the lines of code above and then running the following:
 ```
 staphb-tk cecret -c cecret.config
 ```
+
+Cecret looks for a few folders to find the reference and read files. The MPXV reference file is found in `fastas` and the reads are located in `reads` and `single_reads` depending on whether they're paired.
+
+I'm working on getting everything working on Docker too (see below)
 
 ### Docker Progress
 
