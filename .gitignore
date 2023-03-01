@@ -5,3 +5,4 @@ __pychache__/
 dist/
 build/
 .DS_Store
+sra_data/
