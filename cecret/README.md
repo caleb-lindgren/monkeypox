@@ -10,7 +10,7 @@
 [These instructions](https://developers.google.com/earth-engine/guides/python_install-conda) were the best I found for installing pip using conda on Linux.
 ```
 wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh
-bash ~/miniconda.sh -b -p
+bash ~/miniconda.sh
 rm ~/miniconda.sh
 source $HOME/miniconda3/bin/activate
 
@@ -40,6 +40,14 @@ Once everything is installed you should just need to add staphb-tk to your PATH 
 ```
 cd staphb_toolkit/
 export PATH=$PATH:$(pwd)
+
+module load singularity
+
+export NXF_SINGULARITY_CACHEDIR=/tmp/monkeypox
+mkdir /tmp/monkeypox
+
+conda install -c conda-forge openjdk=11
+
 ```
 
 ### running cecret
