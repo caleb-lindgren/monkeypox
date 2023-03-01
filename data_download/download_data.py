@@ -1,3 +1,4 @@
+import math
 import os
 import pandas as pd
 import re
@@ -49,6 +50,8 @@ root = ElementTree.fromstring(xml_fixed)
 for run in root.iter("Run"):
     accs.append(run.attrib.get("acc"))
 
+accs = sorted(accs)
+
 # Determine how many to download
 if num_download is None:
     num_download = len(accs)
@@ -57,14 +60,42 @@ if num_download is None:
 accs_filename = "accs.tsv"
 
 pd.Series(accs).\
-sort_values().\
 iloc[:num_download].\
 to_csv(accs_filename, sep="\t", index=False, header=False)
 
-print("Accessions parsed.\nDownloading compressed data files using prefetch...")
+print("Accessions parsed.")
+
+# Below function from https://stackoverflow.com/a/14822210
+def convert_size(size_bytes):
+   if size_bytes == 0:
+       return "0B"
+   size_name = ("B", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB")
+   i = int(math.floor(math.log(size_bytes, 1024)))
+   p = math.pow(1024, i)
+   s = round(size_bytes / p, 2)
+   return "%s %s" % (s, size_name[i])
+
+# Optionally use vdb-dump to get download size for each accession
+user_resp = input("Do you want to check the total download size? This may take a while. (y/n) ")
+if user_resp == "y":
+    print("Checking download size...")
+    total_bytes = 0
+    for i, acc in enumerate(accs):
+        size_res = subprocess.run(f"vdb-dump {acc} --info | grep size | tr -s ' ' | cut -d ' ' -f 3", shell=True, capture_output=True)
+        size = int(size_res.stdout.decode("utf-8").strip().replace(",", ""))
+        total_bytes += size
+        print(f"{acc}: {convert_size(size)}" + 10 * " ")
+        print(f"Total ({i + 1}/{len(accs)}): {convert_size(total_bytes)}" + 10 * " ", end="\r")
+
+    print(f"\nTotal: {convert_size(total_bytes)}\nEstimated total memory needed to decompress: {convert_size(total_bytes * 17)}")
+
+elif user_resp != "n":
+    raise ValueError(f"Invalid entry '{user_resp}'. Please enter 'y' or 'n'.")
+
+print("Downloading compressed data files using prefetch...")
 
 # Use prefetch to download the compressed data for those accession numbers
-prefetch_ret = subprocess.run(f"prefetch -p --option-file {accs_filename} -O {download_path}", shell=True)
+prefetch_ret = subprocess.run(f"prefetch -p --option-file {accs_filename} -X 10t -O {download_path}", shell=True)
 
 # Remove the temporary file of accessions
 os.remove(accs_filename)
