@@ -55,6 +55,9 @@ mkdir /tmp/monkeypox
 ### running cecret
 
 I've been able to get Cecret to run inside the `test_dir_cecret` by installing Cecret using the lines of code above and then running the following:
+
+*important:* I talked to the LSB RC guy and the only way we could get things working was to copy everything into the `/tmp` directory and create the `/tmp/singularity/mtn/.../` directory if needed
+
 ```
 staphb-tk cecret -c cecret.config
 ```
