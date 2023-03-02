@@ -15,6 +15,7 @@ rm ~/miniconda.sh
 source $HOME/miniconda3/bin/activate
 
 conda install pip
+conda install -c conda-forge openjdk=11
 
 # (to add conda to PATH)
 printf '\n# add path to conda\nexport PATH="$HOME/miniconda3/bin:$PATH"\n' >> ~/.bashrc
@@ -26,7 +27,6 @@ Once you have pip installed you should be able to run the following.
 pip install urllib3==1.26.7 --user
 pip install requests==2.26.0 --user
 
-git clone https://github.com/StaPH-B/staphb_toolkit.git
 cd staphb_toolkit/packaging/
 python3 setup.py install --user
 cd ../
@@ -38,6 +38,10 @@ export PATH=$PATH:$(pwd)
 Once everything is installed you should just need to add staphb-tk to your PATH again
 
 ```
+source $HOME/miniconda3/bin/activate
+conda install pip
+pip install urllib3==1.26.7 --user
+
 cd staphb_toolkit/
 export PATH=$PATH:$(pwd)
 
@@ -45,8 +49,6 @@ module load singularity
 
 export NXF_SINGULARITY_CACHEDIR=/tmp/monkeypox
 mkdir /tmp/monkeypox
-
-conda install -c conda-forge openjdk=11
 
 ```
 
