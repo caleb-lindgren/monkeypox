@@ -1,0 +1,25 @@
+Virus detail
+Virus name:	hMpxV/USA/CA-LACPHL-MA00411/2023
+Accession ID:	EPI_ISL_16997461
+Clade / Lineage	IIb B.1
+AA Substitutions	D7L R268stop, I4L F454I, J1L Q22stop, J3R Q22stop
+Passage details/history:	Original
+Sample information
+Collection date:	2023-01-04
+Location:	North America / USA / California / Los Angeles County
+Host:	Human
+Additional location information:	
+Gender:	unknown
+Patient age:	unknown
+Patient status:	unknown
+Specimen source:	
+Additional host information:	
+Sampling strategy:	
+Outbreak:	
+Last vaccinated:	
+Treatment:	
+Sequencing technology:	Illumina
+Assembly method:	BWA Version: 0.7.17-r1188; iVar version 1.3.1
+Coverage:	433.841
+Comment:	J1L_Q22stop results in 91.5% truncation of the protein sequence. D7L_R268stop results in 59.5% truncation of the protein sequence. J3R_Q22stop results in 91.5% truncation of the protein sequence. Insertion of 48 nucleotides when compared to the reference sequence. Gap of 7 nucleotides when compared to the reference sequence. B15L without BLAST coverage.
+Institute information

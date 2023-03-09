@@ -1,0 +1,24 @@
+Virus detail
+Virus name:	hMpxV/USA/MA-MSPHL-0172/2022
+Accession ID:	EPI_ISL_15912206
+Clade / Lineage	IIb B.1
+AA Substitutions	A8L F351L, D7L N25S
+Passage details/history:	Original
+Sample information
+Collection date:	2022
+Location:	North America / USA / Massachusetts
+Host:	Human
+Additional location information:	
+Gender:	unknown
+Patient age:	unknown
+Patient status:	unknown
+Specimen source:	
+Additional host information:	
+Sampling strategy:	
+Outbreak:	
+Last vaccinated:	
+Treatment:	
+Sequencing technology:	Illumina
+Assembly method:	BWA v. 0.7017; iVar v. 1.3.1
+Coverage:	
+Comment:	Long stretches of NNNs (13.75% of overall sequence). Insertion of 12 nucleotides when compared to the reference sequence. Gap of 7 nucleotides when compared to the reference sequence. H5R without BLAST coverage. I1L without BLAST coverage. B15L without BLAST coverage. G6R without BLAST coverage. A33R without BLAST coverage. C3L without BLAST coverage. C14L without BLAST coverage. C10L without BLAST coverage. E7R without BLAST coverage.

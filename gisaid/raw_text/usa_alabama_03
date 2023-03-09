@@ -1,0 +1,24 @@
+Virus detail
+Virus name:	hMpxV/Human/USA/AL-USAFSAM-M0001a/2022
+Accession ID:	EPI_ISL_15292973
+Clade / Lineage	IIb B.1.2
+AA Substitutions	A25R S839T, A45L S253L, B5R S293R, B21R D1604N, D7L S326L, F2L H40Y, I8R V400L
+Passage details/history:	Original
+Sample information
+Collection date:	2022-09-06
+Location:	North America / USA / Alabama
+Host:	Human
+Additional location information:	
+Gender:	unknown
+Patient age:	unknown
+Patient status:	unknown
+Specimen source:	clinical; arm lesion swab
+Additional host information:	
+Sampling strategy:	
+Outbreak:	
+Last vaccinated:	
+Treatment:	
+Sequencing technology:	Illumina
+Assembly method:	seqyclean v. 1.10.09; bwa v. 0.7.17; samtools v. 1.15; iVar v. 1.31.1
+Coverage:	
+Comment:	Gap of 7 nucleotide(s) found at refpos 131456 (FRAMESHIFT). Gap of 7 nucleotide(s) found at refpos 164202 (FRAMESHIFT). Insertion of 35 nucleotides when compared to the reference sequence. Gap of 46 nucleotides when compared to the reference sequence.

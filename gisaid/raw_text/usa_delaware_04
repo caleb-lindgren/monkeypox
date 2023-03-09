@@ -1,0 +1,25 @@
+Virus detail
+Virus name:	hMpxV/USA/DE-DPH-B1118431/2022
+Accession ID:	EPI_ISL_16006560
+Clade / Lineage	IIb B.1.7
+AA Substitutions	A12R D214N, A28L D372del, C3L E42K
+Passage details/history:	Original
+Sample information
+Collection date:	2022-09-22
+Location:	North America / USA / Delaware
+Host:	Human
+Additional location information:	
+Gender:	unknown
+Patient age:	unknown
+Patient status:	unknown
+Specimen source:	
+Additional host information:	
+Sampling strategy:	
+Outbreak:	
+Last vaccinated:	
+Treatment:	
+Sequencing technology:	Illumina
+Assembly method:	BWA Version v. 0.7.17-r1188; iVar version v. 1.3.1
+Coverage:	
+Comment:	Long stretches of NNNs (11.15% of overall sequence). Gap of 7 nucleotide(s) found at refpos 136525 (FRAMESHIFT). Insertion of 17 nucleotides when compared to the reference sequence. Gap of 14 nucleotides when compared to the reference sequence.
+Institute information

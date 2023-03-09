@@ -1,0 +1,24 @@
+Virus detail
+Virus name:	hMpxV/USA/CA-LACPHL-MA00412/2023
+Accession ID:	EPI_ISL_16997462
+Clade / Lineage	IIb B.1
+AA Substitutions	C2L S62L, C19L H29Y, O2L D166N
+Passage details/history:	Original
+Sample information
+Collection date:	2023-01-05
+Location:	North America / USA / California / Los Angeles County
+Host:	Human
+Additional location information:	
+Gender:	unknown
+Patient age:	unknown
+Patient status:	unknown
+Specimen source:	
+Additional host information:	
+Sampling strategy:	
+Outbreak:	
+Last vaccinated:	
+Treatment:	
+Sequencing technology:	Illumina
+Assembly method:	BWA Version: 0.7.17-r1188; iVar version 1.3.1
+Coverage:	714.398
+Comment:	Insertion of 48 nucleotides when compared to the reference sequence. Gap of 7 nucleotides when compared to the reference sequence.

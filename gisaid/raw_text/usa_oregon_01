@@ -1,0 +1,24 @@
+Virus detail
+Virus name:	hMpxV/USA/OR-CDC-0008/2022
+Accession ID:	EPI_ISL_16987286
+Clade / Lineage	IIb B.1
+AA Substitutions	A47R S111L, D5R R126K
+Passage details/history:	Original
+Sample information
+Collection date:	2022-06
+Location:	North America / USA / Oregon
+Host:	Human
+Additional location information:	
+Gender:	unknown
+Patient age:	unknown
+Patient status:	unknown
+Specimen source:	
+Additional host information:	
+Sampling strategy:	
+Outbreak:	
+Last vaccinated:	
+Treatment:	
+Sequencing technology:	Illumina NovaSeq 6-000
+Assembly method:	ivar 0.1; samtools 1.7; bwa 0.7.17; SPAdes 3.13.0
+Coverage:	
+Comment:	Insertion of 18 nucleotides when compared to the reference sequence. Gap of 21 nucleotides when compared to the reference sequence.

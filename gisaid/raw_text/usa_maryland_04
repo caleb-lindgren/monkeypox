@@ -1,0 +1,24 @@
+Virus detail
+Virus name:	hMpxV/USA/MD-JH-17/2030
+Accession ID:	EPI_ISL_15661045
+Clade / Lineage	IIb B.1
+AA Substitutions	J1L L105S, J1R N264D, J2L F54S, J2R F54S, J3L N264D, J3R L105S
+Passage details/history:	Original
+Sample information
+Collection date:	2022-07-18
+Location:	North America / USA / Maryland / Baltimore
+Host:	Human
+Additional location information:	
+Gender:	Male
+Patient age:	43
+Patient status:	Released
+Specimen source:	
+Additional host information:	
+Sampling strategy:	
+Outbreak:	
+Last vaccinated:	
+Treatment:	
+Sequencing technology:	Nanopore
+Assembly method:	
+Coverage:	
+Comment:	Long stretches of NNNs (27.24% of overall sequence). Insertion of 7 nucleotides when compared to the reference sequence.
