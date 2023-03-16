@@ -18,6 +18,8 @@ for f in files:
                 loc = line.split("/")[-1].strip()
                 if loc == "Los Angeles County":
                     loc = "California"
+                elif loc == "Baltimore":
+                    loc = "Maryland"
                 locs.append(loc)
             elif line.startswith("Clade"):
                 lineages.append(line.split("Lineage")[-1].strip())
@@ -43,11 +45,11 @@ df = pd.DataFrame({
     "Accession ID": ids,
     "Virus Name": names,
     "Collection Date": pd.to_datetime(dates),
-    "State": locs,
+    "state": locs,
     "Lineage": lineages,
     "AA Substitutions": sample_subs,
 }).\
-sort_values(by=["State", "Lineage"]).\
+sort_values(by=["state", "Lineage"]).\
 reset_index(drop=True)
 
 df.to_csv("gisaid_parsed.tsv", sep="\t", index=False)
