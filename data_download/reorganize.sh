@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for study in ./*; do
+for study in $1/*; do
     if [[ -d $study ]]; then
         mkdir $study/single
         mkdir $study/paired
