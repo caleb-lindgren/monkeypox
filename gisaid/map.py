@@ -28,7 +28,10 @@ states = alt.topo_feature(data.us_10m.url, "states")
 
 chart = alt.Chart(df).mark_geoshape().encode(
     shape="geo:G",
-    color="n:Q",
+    color=alt.Color(
+        "n:Q",
+        scale
+    ),
     facet=alt.Facet("Lineage:N", columns=2),
 ).transform_lookup(
     lookup="id",
@@ -42,3 +45,6 @@ chart = alt.Chart(df).mark_geoshape().encode(
 )
 
 chart.save("map.png", method="selenium", scale_factor=2)
+
+# https://stackoverflow.com/questions/73059639/how-to-make-altair-display-nan-points-with-a-quantitative-color-scale
+# https://snyk.io/advisor/python/altair/functions/altair.Scale
