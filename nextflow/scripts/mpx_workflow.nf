@@ -3,10 +3,10 @@
 params.input = 'input.txt'
 
 workflow {
-    fasta_output = process run_nextflow(params.input)
+    fasta_output = process run_cecret(params.input)
 }
 
-process run_nextflow {
+process run_cecret {
     input:
     file(input_file) from params.input
 
@@ -15,6 +15,6 @@ process run_nextflow {
 
     script:
     """
-    nextflow nextflow_script2.nf --input ${input_file} --output output.fasta
+    nextflow cecret.nf --input ${input_file} --output output.fasta
     """
 }
