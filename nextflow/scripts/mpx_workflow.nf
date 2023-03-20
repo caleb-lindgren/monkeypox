@@ -15,6 +15,6 @@ process run_cecret {
 
     script:
     """
-    nextflow cecret.nf --input ${input_file} --output output.fasta
+    nextflow main.nf --input ${input_file} -c cecret.config
     """
 }
