@@ -9,12 +9,16 @@
 #SBATCH --mail-type=END
 #SBATCH --mail-type=FAIL
 #SBATCH --output=output/slurm_%a.out 
-#SBATCH --array=0-2
+#SBATCH --array=0-174
 
+GOT_DIR=~/fsl_groups/grp_bio465_mpxv/compute/extracted_sra_data
 INPUT_DIR=~/fsl_groups/grp_bio465_mpxv/compute/compressed_sra_data
-OUTPUT_DIR=~/fsl_groups/grp_bio465_mpxv/compute/extracted_sra_data
+OUTPUT_DIR=~/fsl_groups/grp_bio465_mpxv/compute/resolve_extraction_errors
 
-ACC=$(ls $INPUT_DIR | tr " " "\n" | head -$(($SLURM_ARRAY_TASK_ID + 1)) | tail -1)
-mkdir $OUTPUT_DIR/$ACC
+ACC=$(grep -Fxvf <(ls $GOT_DIR | tr " " "\n") <(ls $INPUT_DIR | tr " " "\n") | head -$(($SLURM_ARRAY_TASK_ID + 1)) | tail -1)
 
-fasterq-dump $INPUT_DIR/$ACC -O $OUTPUT_DIR/$ACC
+echo $ACC
+
+#mkdir $OUTPUT_DIR/$ACC
+
+#fasterq-dump $INPUT_DIR/$ACC -O $OUTPUT_DIR/$ACC

@@ -7,3 +7,5 @@ build/
 .DS_Store
 nextclade/nextclade
 data_download/*sra_data*/
+data_download/output/
+data_download/output_archive/
