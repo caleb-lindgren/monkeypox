@@ -2,10 +2,6 @@
 
 params.input = 'input.txt'
 
-workflow {
-    fasta_output = process run_cecret(params.input)
-}
-
 process run_cecret {
     input:
     file(input_file) from params.input
@@ -17,4 +13,8 @@ process run_cecret {
     """
     nextflow main.nf --input ${input_file} -c cecret.config
     """
+}
+
+workflow {
+    fasta_output = run_cecret(params.input)
 }
