@@ -8,4 +8,4 @@ build/
 nextclade/nextclade
 data_download/*sra_data*/
 data_download/output/
-data_download/output_archive/
+data_download/archive_output/

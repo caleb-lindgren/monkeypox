@@ -19,6 +19,6 @@ ACC=$(grep -Fxvf <(ls $GOT_DIR | tr " " "\n") <(ls $INPUT_DIR | tr " " "\n") | h
 
 echo $ACC
 
-#mkdir $OUTPUT_DIR/$ACC
+mkdir $OUTPUT_DIR/$ACC
 
-#fasterq-dump $INPUT_DIR/$ACC -O $OUTPUT_DIR/$ACC
+fasterq-dump $INPUT_DIR/$ACC -O $OUTPUT_DIR/$ACC
