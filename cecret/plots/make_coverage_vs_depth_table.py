@@ -15,13 +15,22 @@ depths = []
 coverages = []
 perc_kepts = []
 
+all_count = 0
+empty_count = 0
+
 for sample_dir in sample_dirs:
+    all_count += 1
     summary_file = os.path.join(sample_dir, "cecret_results.csv")
-    summary_df = pd.read_csv(summary_file)
-    samples.append(summary_df.loc[0, "sample_id"])
-    depths.append(summary_df.loc[0, "depth_after_trimming"])
-    coverages.append(summary_df.loc[0, "1X_coverage_after_trimming"])
-    perc_kepts.append(summary_df.loc[0, "seqyclean_Perc_Kept"])
+    if os.path.isfile(summary_file):
+        summary_df = pd.read_csv(summary_file)
+        samples.append(summary_df.loc[0, "sample_id"])
+        depths.append(summary_df.loc[0, "depth_after_trimming"])
+        coverages.append(summary_df.loc[0, "1X_coverage_after_trimming"])
+        perc_kepts.append(summary_df.loc[0, "seqyclean_Perc_Kept"])
+    else:
+        empty_count += 1
+
+print(f"{empty_count} of {all_count} input directories were empty.")
 
 all_summary = pd.DataFrame({
     "accession": samples,
