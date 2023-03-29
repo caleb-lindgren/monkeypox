@@ -13,6 +13,7 @@ sample_dirs = [f.path for f in os.scandir(data_dir) if f.is_dir()]
 samples = []
 depths = []
 coverages = []
+perc_kepts = []
 
 for sample_dir in sample_dirs:
     summary_file = os.path.join(sample_dir, "cecret_results.csv")
@@ -20,11 +21,13 @@ for sample_dir in sample_dirs:
     samples.append(summary_df.loc[0, "sample_id"])
     depths.append(summary_df.loc[0, "depth_after_trimming"])
     coverages.append(summary_df.loc[0, "1X_coverage_after_trimming"])
+    perc_kepts.append(summary_df.loc[0, "seqyclean_Perc_Kept"])
 
 all_summary = pd.DataFrame({
     "accession": samples,
     "depth": depths,
     "coverage": coverages,
+    "perc_kept": perc_kepts,
 })
 
 all_summary.to_csv("all_summary.tsv", sep="\t", index=False)
