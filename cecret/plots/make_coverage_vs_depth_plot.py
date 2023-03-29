@@ -11,4 +11,4 @@ chart = alt.Chart(all_summary).mark_circle().encode(
     y="depth",
 )
 
-chart.save("coverage_vs_depth_plot.png", scale_factor=1)
+chart.save("coverage_vs_depth_plot.png", scale_factor=4)
