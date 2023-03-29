@@ -27,4 +27,9 @@ all_summary = pd.DataFrame({
     "coverage": coverages,
 })
 
-print(all_summary)
+chart = alt.Chart(all_summary).mark_circle().encode(
+    x="coverage",
+    y="depth",
+)
+
+chart.save("test.png")
