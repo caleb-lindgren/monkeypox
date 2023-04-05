@@ -34,13 +34,25 @@ Additionally, you will need internet access while you are logged in to the clust
     - Data files:
     - Cecret:
 4. Unzip the downloaded files.
-5. Configure Cecret if desired:
+5. Follow the following instructions to install NextClade and the MPXV dataset:
+    - [NextClade](https://docs.nextstrain.org/projects/nextclade/en/stable/user/nextclade-cli.html#download-from-command-line)
+
+Move the `nextclade` directory into the unzipped `cecret_working_directory` using the following code.
+```unix
+mv -r nextclade /PATH/TO/cecret_working_directory
+```
+Download the NextStrain MPXV dataset:
+```unix
+./nextclade dataset get --name 'MPXV' --output-dir 'data/monkeypox'
+```
+
+6. Configure Cecret if desired:
     1. By default Cecret will look for input files at XXX. To change this location, edit line XXX of the cecret.config file.
     2. This workflow uses the reference genome from XXX by default. To use a different reference genome, specify the path on line XXX of the cecret.config file.
-6. Run the Snakemake workflow located at XXX within the GitHub repository, and run it using the command `XXX`. Under the hood, this workflow will do the following things:
+7. Run the Snakemake workflow located at XXX within the GitHub repository, and run it using the command `XXX`. Under the hood, this workflow will do the following things:
     1. Use sbatch to submit a Slurm job array to use Cecret to assemble the reads for each of the samples you input.
         - Note: If you are in a shared group folder, you may need to edit line XXX of the Snakemake workflow to run this sbatch command using sg. The syntax is `sg <GROUP_NAME> "sbatch <ORIGINAL_JOB_SCRIPT_PATH>"`.
     2. Use Python to generate a figure showing the genome coverage plotted against the coverage depth for each of your samples.
     3. Use sbatch to submit a Slurm job [check with Zach: is it a single job or a job array?] to run Nextclade to assign lineages to your submitted samples. This will create a JSON output file.
     4. If you included geographical metadata for your samples, Snakemake will use Python to generate a chart showing the geographic distribuion of the different lineages in your samples.
-7. Finally, take the JSON output from Nextclade and upload it to the web browser Nextclade application to visualize the lineage tree for your samples and see how they compare to other publicly available monkeypox virus samples.
+8. Finally, take the JSON output from Nextclade and upload it to the web browser Nextclade application to visualize the lineage tree for your samples and see how they compare to other publicly available monkeypox virus samples.
