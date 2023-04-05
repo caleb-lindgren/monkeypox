@@ -32,19 +32,20 @@ Additionally, you will need internet access while you are logged in to the clust
 2. Clone this GitHub repository ([https://github.com/caleb-lindgren/monkeypox](https://github.com/caleb-lindgren/monkeypox))
 3. Use wget or a similar program to download the following files:
     - Data files:
-    - Cecret:
+    - Cecret: https://byu.box.com/s/dyp7hqvijtyot9ne0yl0sjmq3dbrd2kp
 4. Unzip the downloaded files.
 5. Follow the following instructions to install NextClade and the MPXV dataset:
-    - [NextClade](https://docs.nextstrain.org/projects/nextclade/en/stable/user/nextclade-cli.html#download-from-command-line)
+    - [NextClade install instructions](https://docs.nextstrain.org/projects/nextclade/en/stable/user/nextclade-cli.html#download-from-command-line)
+	- Move the `nextclade` directory into the unzipped `cecret_working_directory` using the following code.
+	```unix
+	mv -r nextclade /PATH/TO/cecret_working_directory
+	```
+	- Download the NextStrain MPXV dataset:
+	```unix
+	./nextclade dataset get --name 'MPXV' --output-dir 'data/monkeypox'
+	```
 
-Move the `nextclade` directory into the unzipped `cecret_working_directory` using the following code.
-```unix
-mv -r nextclade /PATH/TO/cecret_working_directory
-```
-Download the NextStrain MPXV dataset:
-```unix
-./nextclade dataset get --name 'MPXV' --output-dir 'data/monkeypox'
-```
+
 
 6. Configure Cecret if desired:
     1. By default Cecret will look for input files at XXX. To change this location, edit line XXX of the cecret.config file.
@@ -55,4 +56,4 @@ Download the NextStrain MPXV dataset:
     2. Use Python to generate a figure showing the genome coverage plotted against the coverage depth for each of your samples.
     3. Use sbatch to submit a Slurm job [check with Zach: is it a single job or a job array?] to run Nextclade to assign lineages to your submitted samples. This will create a JSON output file.
     4. If you included geographical metadata for your samples, Snakemake will use Python to generate a chart showing the geographic distribuion of the different lineages in your samples.
-8. Finally, take the JSON output from Nextclade and upload it to the web browser Nextclade application to visualize the lineage tree for your samples and see how they compare to other publicly available monkeypox virus samples.
+8. Finally, take the JSON output from Nextclade (titled `nextclade.auspice.json`) and upload it to [Auspice.us](auspice.us) via drag & drop to visualize the lineage tree for your samples and see how they compare to other publicly available monkeypox virus samples. Scroll to the bottom to the filters and toggle "Filter by Node type" to "New "
