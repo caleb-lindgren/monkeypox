@@ -1,4 +1,5 @@
 # Emerging Viral Strains 
+### SNAKEMAKE INSTRUCTIONS
 
 ## Project descriptions
 
@@ -33,9 +34,6 @@ Additionally, you will need internet access while you are logged in to the clust
 3. Use wget or a similar program to download the following files:
     - Data files:
     - Cecret: https://byu.box.com/s/dyp7hqvijtyot9ne0yl0sjmq3dbrd2kp
-    ```unix
-    wget -P /DESIRED/PATH https://byu.box.com/s/dyp7hqvijtyot9ne0yl0sjmq3dbrd2kp
-    ```
 4. Unzip the downloaded files.
 5. Follow the following instructions to install NextClade and the MPXV dataset:
     - [NextClade install instructions](https://docs.nextstrain.org/projects/nextclade/en/stable/user/nextclade-cli.html#download-from-command-line)
@@ -43,14 +41,15 @@ Additionally, you will need internet access while you are logged in to the clust
 	```unix
 	mv -r nextclade /PATH/TO/cecret_working_directory
 	```
-	- Download the NextStrain MPXV dataset (used to compare our own samples against later):
+	- Download the NextStrain MPXV dataset:
 	```unix
 	./nextclade dataset get --name 'MPXV' --output-dir 'data/monkeypox'
 	```
 
 6. Configure Cecret if desired:
-    - This workflow uses [this reference genome](https://www.ncbi.nlm.nih.gov/nuccore/NC_063383) by default. To use a different reference genome, move the fasta file to `/PATH/TO/cecret_working_directory/fastas/`.
-7. Run the bash script located at XXX within the GitHub repository, and run it using the command `XXX`. Under the hood, this workflow will do the following things:
+    1. By default Cecret will look for input files at XXX. To change this location, edit line XXX of the cecret.config file.
+    2. This workflow uses [this reference genome](https://www.ncbi.nlm.nih.gov/nuccore/NC_063383) by default. To use a different reference genome, move the fasta file to `/PATH/TO/cecret_working_directory/fastas/`.
+7. Run the Snakemake workflow located at XXX within the GitHub repository, and run it using the command `XXX`. Under the hood, this workflow will do the following things:
     1. Use sbatch to submit a Slurm job array to use Cecret to assemble the reads for each of the samples you input.
         - Note: If you are in a shared group folder, you may need to edit line XXX of the Snakemake workflow to run this sbatch command using sg. The syntax is `sg <GROUP_NAME> "sbatch <ORIGINAL_JOB_SCRIPT_PATH>"`.
     2. Use Python to generate a figure showing the genome coverage plotted against the coverage depth for each of your samples.
