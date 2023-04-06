@@ -36,13 +36,17 @@ cd monkeypox
 ```
 4. Use wget or a similar program to download the following files:
     - Data files: https://byu.box.com/shared/static/vbyi1n05chlbah2fmcuts5nwegyxyzxb.xz
+<<<<<<< HEAD
+    - Cecret directory: https://byu.box.com/shared/static/y5nke4x985rtt4li4t4xlue6lffndtq3.xz
+=======
     - Cecret directory: https://byu.box.com/shared/static/ar3n6wpke8g4kcwwv3zxm90i8aekc8tg.xz
+>>>>>>> f8f67d8d522078abd98cffefa003f18b8500a825
     ```unix
-    wget https://byu.box.com/shared/static/ar3n6wpke8g4kcwwv3zxm90i8aekc8tg.xz
+    wget https://byu.box.com/shared/static/y5nke4x985rtt4li4t4xlue6lffndtq3.xz
     ```
 4. Unzip the downloaded files.
  ```unix
-xz -d cecret_working_directory_9.xz
+tar -xvf y5nke4x985rtt4li4t4xlue6lffndtq3.xz
 ```
 6. Follow the following instructions to install NextClade and the MPXV dataset:
     - [NextClade install instructions (platform specific)](https://docs.nextstrain.org/projects/nextclade/en/stable/user/nextclade-cli.html#download-from-command-line)
@@ -64,4 +68,4 @@ xz -d cecret_working_directory_9.xz
     2. Use Python to generate a figure showing the genome coverage plotted against the coverage depth for each of your samples.
     3. Use sbatch to submit a Slurm job [check with Zach: is it a single job or a job array?] to run Nextclade to assign lineages to your submitted samples. This will create a JSON output file.
     4. If you included geographical metadata for your samples, Snakemake will use Python to generate a chart showing the geographic distribuion of the different lineages in your samples.
-8. Finally, take the JSON output from Nextclade (titled `nextclade.auspice.json`) and upload it to [Auspice.us](auspice.us) via drag & drop to visualize the lineage tree for your samples and see how they compare to other publicly available monkeypox virus samples. Scroll to the bottom to the filters and toggle "Filter by Node type" to "New "
+8. Finally, take the JSON output from Nextclade (titled `nextclade.auspice.json`) and upload it to [Auspice.us](auspice.us) via drag & drop to visualize the lineage tree for your samples and see how they compare to other publicly available monkeypox virus samples. Scroll to the bottom to the filters and toggle "Filter by Node type" to "New"
