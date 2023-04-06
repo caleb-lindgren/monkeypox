@@ -29,16 +29,16 @@ Additionally, you will need internet access while you are logged in to the clust
 ## Instructions for use
 
 1. Log in to your high performance computing cluster. 
-2. Clone this GitHub repository ([https://github.com/caleb-lindgren/monkeypox](https://github.com/caleb-lindgren/monkeypox)) and enter the directory
+2. Clone this GitHub repository ([https://github.com/caleb-lindgren/monkeypox](https://github.com/caleb-lindgren/monkeypox)) and enter the directory.
 ```unix
 git clone https://github.com/caleb-lindgren/monkeypox
 cd monkeypox
 ```
 4. Use wget or a similar program to download the following files:
     - Data files:
-    - Cecret: https://byu.box.com/shared/static/ar3n6wpke8g4kcwwv3zxm90i8aekc8tg.xz
+    - [Cecret](https://byu.box.com/shared/static/ar3n6wpke8g4kcwwv3zxm90i8aekc8tg.xz)
     ```unix
-    wget -P /DESIRED/PATH https://byu.box.com/shared/static/ar3n6wpke8g4kcwwv3zxm90i8aekc8tg.xz
+    wget https://byu.box.com/shared/static/ar3n6wpke8g4kcwwv3zxm90i8aekc8tg.xz
     ```
 4. Unzip the downloaded files.
  ```unix
@@ -46,11 +46,11 @@ xz -d cecret_working_directory_9.xz
 ```
 6. Follow the following instructions to install NextClade and the MPXV dataset:
     - [NextClade install instructions (platform specific)](https://docs.nextstrain.org/projects/nextclade/en/stable/user/nextclade-cli.html#download-from-command-line)
-	- Move the `nextclade` directory into the unzipped `cecret_working_directory` using the following code.
+	- Move the `nextclade` directory into the unzipped `cecret_working_directory`.
 	```unix
 	mv nextclade /PATH/TO/cecret_working_directory
 	```
-	- Download the NextStrain MPXV dataset (used to compare our own samples against later) and move it into `cecret_working_directory` as well:
+	- Download the NextStrain MPXV dataset (used to compare our own samples against later) and move it into `cecret_working_directory` as well.
 	```unix
 	./nextclade dataset get --name 'MPXV' --output-dir 'data/monkeypox'
 	mv data /PATH/TO/cecret_working_directory
