@@ -32,8 +32,8 @@ Additionally, you will need internet access while you are logged in to the clust
 1. Log in to your high performance computing cluster. 
 2. Clone this GitHub repository ([https://github.com/caleb-lindgren/monkeypox](https://github.com/caleb-lindgren/monkeypox))
 3. Use wget or a similar program to download the following files:
-    - Data files:
-    - Cecret: https://byu.box.com/s/dyp7hqvijtyot9ne0yl0sjmq3dbrd2kp
+    - Data files: https://byu.box.com/shared/static/vbyi1n05chlbah2fmcuts5nwegyxyzxb.xz
+    - Cecret: https://byu.box.com/shared/static/dyp7hqvijtyot9ne0yl0sjmq3dbrd2kp.gz
 4. Unzip the downloaded files.
 5. Follow the following instructions to install NextClade and the MPXV dataset:
     - [NextClade install instructions](https://docs.nextstrain.org/projects/nextclade/en/stable/user/nextclade-cli.html#download-from-command-line)

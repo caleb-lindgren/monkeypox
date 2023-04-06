@@ -31,7 +31,7 @@ Additionally, you will need internet access while you are logged in to the clust
 1. Log in to your high performance computing cluster. 
 2. Clone this GitHub repository ([https://github.com/caleb-lindgren/monkeypox](https://github.com/caleb-lindgren/monkeypox))
 3. Use wget or a similar program to download the following files:
-    - Data files:
+    - Data files: https://byu.box.com/shared/static/vbyi1n05chlbah2fmcuts5nwegyxyzxb.xz
     - Cecret: https://byu.box.com/shared/static/dyp7hqvijtyot9ne0yl0sjmq3dbrd2kp.gz
     ```unix
     wget -P /DESIRED/PATH https://byu.box.com/shared/static/dyp7hqvijtyot9ne0yl0sjmq3dbrd2kp.gz
