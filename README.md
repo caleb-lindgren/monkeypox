@@ -32,9 +32,9 @@ Additionally, you will need internet access while you are logged in to the clust
 2. Clone this GitHub repository ([https://github.com/caleb-lindgren/monkeypox](https://github.com/caleb-lindgren/monkeypox))
 3. Use wget or a similar program to download the following files:
     - Data files:
-    - Cecret: https://byu.box.com/s/dyp7hqvijtyot9ne0yl0sjmq3dbrd2kp
+    - Cecret: https://byu.box.com/shared/static/dyp7hqvijtyot9ne0yl0sjmq3dbrd2kp.gz
     ```unix
-    wget -P /DESIRED/PATH https://byu.box.com/s/dyp7hqvijtyot9ne0yl0sjmq3dbrd2kp
+    wget -P /DESIRED/PATH https://byu.box.com/shared/static/dyp7hqvijtyot9ne0yl0sjmq3dbrd2kp.gz
     ```
 4. Unzip the downloaded files.
 5. Follow the following instructions to install NextClade and the MPXV dataset:
