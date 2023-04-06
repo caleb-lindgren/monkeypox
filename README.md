@@ -29,28 +29,36 @@ Additionally, you will need internet access while you are logged in to the clust
 ## Instructions for use
 
 1. Log in to your high performance computing cluster. 
-2. Clone this GitHub repository ([https://github.com/caleb-lindgren/monkeypox](https://github.com/caleb-lindgren/monkeypox))
-3. Use wget or a similar program to download the following files:
+2. Clone this GitHub repository ([https://github.com/caleb-lindgren/monkeypox](https://github.com/caleb-lindgren/monkeypox)) and enter the directory
+```unix
+git clone https://github.com/caleb-lindgren/monkeypox
+cd monkeypox
+```
+4. Use wget or a similar program to download the following files:
     - Data files:
-    - Cecret: https://byu.box.com/s/dyp7hqvijtyot9ne0yl0sjmq3dbrd2kp
+    - Cecret: https://byu.box.com/shared/static/ar3n6wpke8g4kcwwv3zxm90i8aekc8tg.xz
     ```unix
-    wget -P /DESIRED/PATH https://byu.box.com/s/dyp7hqvijtyot9ne0yl0sjmq3dbrd2kp
+    wget -P /DESIRED/PATH https://byu.box.com/shared/static/ar3n6wpke8g4kcwwv3zxm90i8aekc8tg.xz
     ```
 4. Unzip the downloaded files.
-5. Follow the following instructions to install NextClade and the MPXV dataset:
-    - [NextClade install instructions](https://docs.nextstrain.org/projects/nextclade/en/stable/user/nextclade-cli.html#download-from-command-line)
+ ```unix
+xz -d cecret_working_directory_9.xz
+```
+6. Follow the following instructions to install NextClade and the MPXV dataset:
+    - [NextClade install instructions (platform specific)](https://docs.nextstrain.org/projects/nextclade/en/stable/user/nextclade-cli.html#download-from-command-line)
 	- Move the `nextclade` directory into the unzipped `cecret_working_directory` using the following code.
 	```unix
-	mv -r nextclade /PATH/TO/cecret_working_directory
+	mv nextclade /PATH/TO/cecret_working_directory
 	```
-	- Download the NextStrain MPXV dataset (used to compare our own samples against later):
+	- Download the NextStrain MPXV dataset (used to compare our own samples against later) and move it into `cecret_working_directory` as well:
 	```unix
 	./nextclade dataset get --name 'MPXV' --output-dir 'data/monkeypox'
+	mv data /PATH/TO/cecret_working_directory
 	```
 
 6. Configure Cecret if desired:
-    - This workflow uses [this reference genome](https://www.ncbi.nlm.nih.gov/nuccore/NC_063383) by default. To use a different reference genome, move the fasta file to `/PATH/TO/cecret_working_directory/fastas/`.
-7. Run the bash script located at XXX within the GitHub repository, and run it using the command `XXX`. Under the hood, this workflow will do the following things:
+    - This workflow uses [this reference genome](https://www.ncbi.nlm.nih.gov/nuccore/NC_063383) by default. To use a different reference genome, move its fasta file to `/PATH/TO/cecret_working_directory/fastas/`.
+7. Run the bash script `STEP_1_assemble_genomes.sh` within the GitHub repository using the command `bash STEP_1_assemble_genomes.sh`. Under the hood, this workflow will do the following things:
     1. Use sbatch to submit a Slurm job array to use Cecret to assemble the reads for each of the samples you input.
         - Note: If you are in a shared group folder, you may need to edit line XXX of the Snakemake workflow to run this sbatch command using sg. The syntax is `sg <GROUP_NAME> "sbatch <ORIGINAL_JOB_SCRIPT_PATH>"`.
     2. Use Python to generate a figure showing the genome coverage plotted against the coverage depth for each of your samples.
