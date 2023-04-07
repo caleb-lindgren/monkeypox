@@ -55,9 +55,9 @@ tar xf y5nke4x985rtt4li4t4xlue6lffndtq3.xz
 ```
 6. Follow the following instructions to install NextClade and the MPXV dataset:
     - [NextClade install instructions (platform specific)](https://docs.nextstrain.org/projects/nextclade/en/stable/user/nextclade-cli.html#download-from-command-line)
-	- Move the `nextclade` directory into the unzipped `cecret_working_directory`.
+	- Move the `nextclade` executable file into the unzipped `cecret_working_directory`.
 	```unix
-	mv nextclade /PATH/TO/cecret_working_directory
+	mv nextclade cecret_working_directory/
 	```
 	- Download the NextStrain MPXV dataset (used to compare our own samples against later) and move it into `cecret_working_directory` as well.
 	```unix
