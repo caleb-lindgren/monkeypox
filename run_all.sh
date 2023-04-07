@@ -1,21 +1,29 @@
 #!/bin/bash
 
-#Run CECRET
-sbatch STEP_1_assemble_genomes.sh
+# Directory setup
+STEP_1_SLURM_OUTPUT_DIR=scripts/slurm_output/STEP_1
+STEP_2_SLURM_OUTPUT_DIR=scripts/slurm_output/STEP_2
 
-#Wait For Slurm
-INPUT_DIR=~/fsl_groups/grp_bio465_mpxv/compute/extracted_sra_data/
-SLURM_OUTPUT_DIR=./output
+mkdir -p $STEP_1_SLURM_OUTPUT_DIR
+mkdir -p $STEP_2_SLURM_OUTPUT_DIR
 
-NUM_INPUT=$(ls $INPUT_DIR | tr " " "\n" | wc -l)
+# Update step 1 job script to start correct number of array jobs
 
-while [ $(ls $SLURM_OUTPUT_DIR | tr " " "\n" | wc -l) != $NUM_INTPUT ]
+INPUT_DIR=extracted_sra_data/
+NUM_INPUT=$(ls $INPUT_DIR | tr ' ' '\n' | wc -l)
+
+# Run CECRET
+sbatch scripts/STEP_1_assemble_genomes.sh
+
+# Wait For Slurm
+
+while [ "$(ls $STEP_1_SLURM_OUTPUT_DIR | tr ' ' '\n' | wc -l)" != "$NUM_INPUT" ]
 do
         sleep 1
 done
 
 #Generate Plots
-python cecret/plots/coverage_vs_depth/make_coverage_vs_depth_plot.py ~/fsl_groups/grp_bio465_mpxv/compute/cecret_output/cecret_run_02/
+python scripts/make_coverage_vs_depth_plot.py cecret_output/
 
 #Run Nextclade
-sbatch STEP_2_analyze_genome_lineages.sh
+sbatch scripts/STEP_2_analyze_genome_lineages.sh

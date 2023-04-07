@@ -5,8 +5,8 @@
 #SBATCH --nodes=1   # number of nodes
 #SBATCH --mem-per-cpu=1024M   # memory per CPU core
 #SBATCH -J "cecret_%a"  # job name 
-#SBATCH --output=ZACH_OUTPUT/slurm_%a.out
-#SBATCH --array=0-5
+#SBATCH --output=slurm_output/STEP_1
+#SBATCH --array=
 
 # Load modules
 
@@ -16,17 +16,17 @@ module load jdk/1.12
 mkdir -p /tmp/singularity/mnt/session
 
 # Data directories setup
-ALL_INPUT_DIR=~/fsl_groups/grp_bio465_mpxv/compute/extracted_sra_data/
+ALL_INPUT_DIR=../extracted_sra_data/
 ACC=$(ls $ALL_INPUT_DIR | tr " " "\n" | head -$(($SLURM_ARRAY_TASK_ID + 1)) | tail -1)
-PREFIX="cecret_run_03"
 
 INPUT_DIR=$ALL_INPUT_DIR/$ACC
 
-ALL_OUTPUT_DIR=~/fsl_groups/grp_bio465_mpxv/compute/cecret_output
-OUTPUT_DIR=$ALL_OUTPUT_DIR/$PREFIX/$ACC
+ALL_OUTPUT_DIR=cecret_output
+mkdir -p $ALL_OUTPUT_DIR
+
+OUTPUT_DIR=$ALL_OUTPUT_DIR/$ACC
 NEXTCLADE_DIR=$ALL_OUTPUT_DIR/nextclade_fastas
 
-rm -rf $NEXTCLADE_DIR
 mkdir -p $NEXTCLADE_DIR
 
 CECRET_DIR=/tmp/d/$ACC
