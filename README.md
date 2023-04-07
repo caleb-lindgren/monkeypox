@@ -36,11 +36,7 @@ cd monkeypox
 ```
 4. Use wget or a similar program to download the following files:
     - Data files: https://byu.box.com/shared/static/vbyi1n05chlbah2fmcuts5nwegyxyzxb.xz
-<<<<<<< HEAD
     - Cecret directory: https://byu.box.com/shared/static/y5nke4x985rtt4li4t4xlue6lffndtq3.xz
-=======
-    - Cecret directory: https://byu.box.com/shared/static/ar3n6wpke8g4kcwwv3zxm90i8aekc8tg.xz
->>>>>>> f8f67d8d522078abd98cffefa003f18b8500a825
     ```unix
     wget https://byu.box.com/shared/static/y5nke4x985rtt4li4t4xlue6lffndtq3.xz
     ```
