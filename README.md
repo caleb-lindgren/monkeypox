@@ -55,15 +55,14 @@ tar xf y5nke4x985rtt4li4t4xlue6lffndtq3.xz
 ```
 6. Follow the following instructions to install NextClade and the MPXV dataset:
     - [NextClade install instructions (platform specific)](https://docs.nextstrain.org/projects/nextclade/en/stable/user/nextclade-cli.html#download-from-command-line)
-	- Move the `nextclade` executable file into the unzipped `cecret_working_directory`.
-	```unix
-	mv nextclade cecret_working_directory/
-	```
-	- Download the NextStrain MPXV dataset (used to compare our own samples against later) and move it into `cecret_working_directory` as well.
-	```unix
-	./nextclade dataset get --name 'MPXV' --output-dir 'data/monkeypox'
-	mv data /PATH/TO/cecret_working_directory
-	```
+    - Move the `nextclade` executable file into the unzipped `cecret_working_directory`.
+    ```unix
+    mv nextclade cecret_working_directory/
+    ```
+    - Download the NextStrain MPXV dataset (used to compare our own samples against later) into `cecret_working_directory` as well.
+    ```unix
+    cecret_working_directory/nextclade dataset get --name 'MPXV' --output-dir 'cecret_working_directory/data/monkeypox'
+    ```
 
 6. Configure Cecret if desired:
     - This workflow uses [this reference genome](https://www.ncbi.nlm.nih.gov/nuccore/NC_063383) by default. To use a different reference genome, move its fasta file to `/PATH/TO/cecret_working_directory/fastas/`.
