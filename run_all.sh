@@ -12,6 +12,8 @@ mkdir -p $STEP_2_SLURM_OUTPUT_DIR
 INPUT_DIR=extracted_sra_data/
 NUM_INPUT=$(ls $INPUT_DIR | tr ' ' '\n' | wc -l)
 
+sed -i "s/#SBATCH --array=/#SBATCH --array=0-$(($NUM_INPUT-1))/" scripts/STEP_1_assemble_genomes.sh
+
 # Run CECRET
 sbatch scripts/STEP_1_assemble_genomes.sh
 
