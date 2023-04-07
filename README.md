@@ -35,8 +35,11 @@ git clone https://github.com/caleb-lindgren/monkeypox
 cd monkeypox
 ```
 4. Use wget or a similar program to download the following files:
-    - Data files: https://byu.box.com/shared/static/vbyi1n05chlbah2fmcuts5nwegyxyzxb.xz
-    - Cecret directory: https://byu.box.com/shared/static/y5nke4x985rtt4li4t4xlue6lffndtq3.xz
+    - Data files: [https://byu.box.com/shared/static/vbyi1n05chlbah2fmcuts5nwegyxyzxb.xz](https://byu.box.com/shared/static/vbyi1n05chlbah2fmcuts5nwegyxyzxb.xz)
+    ```unix
+    wget https://byu.box.com/shared/static/vbyi1n05chlbah2fmcuts5nwegyxyzxb.xz
+    ```
+    - Cecret directory: [https://byu.box.com/shared/static/y5nke4x985rtt4li4t4xlue6lffndtq3.xz](https://byu.box.com/shared/static/y5nke4x985rtt4li4t4xlue6lffndtq3.xz)
     ```unix
     wget https://byu.box.com/shared/static/y5nke4x985rtt4li4t4xlue6lffndtq3.xz
     ```
