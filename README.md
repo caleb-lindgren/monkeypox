@@ -20,6 +20,7 @@ This workflow was developed on a high performance computing cluster with the fol
 - Slurm 22.05.7
 - wget 1.14
 - Python 3
+    - Seaborn
     - Matplotlib
     - Numpy
     - Pandas
