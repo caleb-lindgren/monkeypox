@@ -35,7 +35,7 @@ for sample_dir in sample_dirs:
     else:
         empty_count += 1
 
-print(f"{empty_count} of {all_count} input directories were empty.")
+#print(f"{empty_count} of {all_count} input directories were empty.")
 
 all_summary = pd.DataFrame({
     "accession": samples,
