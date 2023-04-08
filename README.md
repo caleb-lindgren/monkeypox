@@ -39,7 +39,7 @@ git clone git@github.com:caleb-lindgren/monkeypox.git
 
 cd monkeypox
 ```
-4. Use wget or a similar program to download the following files:
+3. Use wget or a similar program to download the following files:
     - Data files: [https://byu.box.com/shared/static/vbyi1n05chlbah2fmcuts5nwegyxyzxb.xz](https://byu.box.com/shared/static/vbyi1n05chlbah2fmcuts5nwegyxyzxb.xz)
     ```unix
     wget https://byu.box.com/shared/static/vbyi1n05chlbah2fmcuts5nwegyxyzxb.xz
