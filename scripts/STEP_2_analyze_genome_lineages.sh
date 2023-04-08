@@ -7,18 +7,17 @@
 #SBATCH -J "nc_%a"  # job name 
 #SBATCH --output=slurm_output/STEP_2
 
-NEXTCLADE_DIR=cecret_output/nextclade_fastas/
-OUTPUT_DIR=cecret_output/nextclade_output/
-
+NEXTCLADE_DIR=$(pwd)/scripts/slurm_output/concensus_fastas_for_nextclade
+OUTPUT_DIR=$(pwd)/scripts/slurm_output/STEP_2
 mkdir -p $OUTPUT_DIR
 
-cd ../cecret_working_directory/
+cd cecret_working_directory
 
 RUST_BACKTRACE=1
 
 ./nextclade run \
    --input-dataset data/mpxv \
-   --output-all=../scripts/$OUTPUT_DIR/ \
+   --output-all=$OUTPUT_DIR/ \
    $NEXTCLADE_DIR/*.fa
 
-echo "finished :)"
+echo "NEXTCLADE finished :)"

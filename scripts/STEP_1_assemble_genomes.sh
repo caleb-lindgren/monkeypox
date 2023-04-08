@@ -5,28 +5,29 @@
 #SBATCH --nodes=1   # number of nodes
 #SBATCH --mem-per-cpu=1024M   # memory per CPU core
 #SBATCH -J "cecret_%a"  # job name 
-#SBATCH --output=slurm_output/STEP_1
-#SBATCH --array=
+#SBATCH --output=scripts/slurm_output/STEP_1_LOGS/slurm_%a.out
+#SBATCH --array=0-149
 
 # Load modules
-
 module load singularity
 module load jdk/1.12
 
+# Necessary setup for Cecret
 mkdir -p /tmp/singularity/mnt/session
 
 # Data directories setup
-ALL_INPUT_DIR=../extracted_sra_data/
+ALL_INPUT_DIR=extracted_sra_data
+CWD=$(pwd)
+
 ACC=$(ls $ALL_INPUT_DIR | tr " " "\n" | head -$(($SLURM_ARRAY_TASK_ID + 1)) | tail -1)
 
 INPUT_DIR=$ALL_INPUT_DIR/$ACC
 
-ALL_OUTPUT_DIR=cecret_output
+ALL_OUTPUT_DIR=$CWD/scripts/slurm_output/STEP_1
 mkdir -p $ALL_OUTPUT_DIR
 
 OUTPUT_DIR=$ALL_OUTPUT_DIR/$ACC
-NEXTCLADE_DIR=$ALL_OUTPUT_DIR/nextclade_fastas
-
+NEXTCLADE_DIR=scripts/slurm_output/consensus_fastas_for_nextclade
 mkdir -p $NEXTCLADE_DIR
 
 CECRET_DIR=/tmp/d/$ACC
@@ -66,18 +67,12 @@ sed -i "40s|TO_REPLACE|reads|" $CONFIG # Paired reads
 sed -i "41s|TO_REPLACE|single_reads|" $CONFIG # Single reads 
 sed -i "43s|TO_REPLACE|cecret|" $CONFIG # Output 
 
-# This is how I got the nextclade dataset
-# nextclade dataset get --name 'MPXV' --output-dir 'data/monkeypox'
-# Next step (running auspice)
-# https://docs.nextstrain.org/projects/auspice/en/stable/introduction/how-to-run.html
-
 # Run cecret
 ./nextflow Cecret/main.nf \
    -c $CONFIG
- 
-echo "cp -r $CECRET_DIR $OUTPUT_DIR"
 
+cd $CWD
 cp -r $CECRET_DIR/cecret/* $OUTPUT_DIR/
-cp -r $CECRET_DIR/cecret/consensus/*consensus.fa $NEXTCLADE_DIR/
+cp $CECRET_DIR/cecret/consensus/*consensus.fa $NEXTCLADE_DIR/
 
 echo "output completed :)"
