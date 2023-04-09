@@ -5,7 +5,7 @@
 #SBATCH --nodes=1   # number of nodes
 #SBATCH --mem-per-cpu=1024M   # memory per CPU core
 #SBATCH -J "cecret_%a"  # job name 
-#SBATCH --output=scripts/slurm_output/STEP_1/slurm_%a.out
+#SBATCH --output=slurm_output/STEP_1/slurm_%a.out
 #SBATCH --array=0-149
 
 # Load modules
