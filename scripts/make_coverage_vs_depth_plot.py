@@ -31,7 +31,10 @@ for sample_dir in sample_dirs:
         samples.append(summary_df.loc[0, "sample_id"])
         depths.append(summary_df.loc[0, "depth_after_trimming"])
         coverages.append(summary_df.loc[0, "1X_coverage_after_trimming"])
-        perc_kepts.append(summary_df.loc[0, "seqyclean_Perc_Kept"])
+        try:
+            perc_kepts.append(summary_df.loc[0, "seqyclean_Perc_Kept"])
+        except:
+            perc_kepts.append(summary_df.loc[0, "seqycln_Perc_Kept"])
     else:
         empty_count += 1
 

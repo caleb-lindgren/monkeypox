@@ -25,6 +25,7 @@ INPUT_DIR=$ALL_INPUT_DIR/$ACC
 
 ALL_OUTPUT_DIR=$CWD/scripts/slurm_output/STEP_1
 mkdir -p $ALL_OUTPUT_DIR
+mkdir -p scripts/slurm_output/STEP_1_LOGS/
 
 OUTPUT_DIR=$ALL_OUTPUT_DIR/$ACC
 NEXTCLADE_DIR=scripts/slurm_output/consensus_fastas_for_nextclade
