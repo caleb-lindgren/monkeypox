@@ -27,7 +27,7 @@ This workflow was developed on a high performance computing cluster with the fol
     
 Additionally, you will need internet access while you are logged in to the cluster, but computing jobs that you run on the cluster will not require internet access. 
 
-## Instructions for use
+## Reproducibility challenge instructions
 
 1. Log in to your high performance computing cluster. 
 2. Clone this GitHub repository ([https://github.com/caleb-lindgren/monkeypox](https://github.com/caleb-lindgren/monkeypox)) and enter the directory.
@@ -39,36 +39,6 @@ git clone git@github.com:caleb-lindgren/monkeypox.git
 
 cd monkeypox
 ```
-3. Use wget or a similar program to download the following files:
-    - Data files: [https://byu.box.com/shared/static/vbyi1n05chlbah2fmcuts5nwegyxyzxb.xz](https://byu.box.com/shared/static/vbyi1n05chlbah2fmcuts5nwegyxyzxb.xz)
-    ```unix
-    wget https://byu.box.com/shared/static/vbyi1n05chlbah2fmcuts5nwegyxyzxb.xz
-    ```
-    - Cecret directory: [https://byu.box.com/shared/static/y5nke4x985rtt4li4t4xlue6lffndtq3.xz](https://byu.box.com/shared/static/y5nke4x985rtt4li4t4xlue6lffndtq3.xz)
-    ```unix
-    wget https://byu.box.com/shared/static/y5nke4x985rtt4li4t4xlue6lffndtq3.xz
-    ```
-4. Unzip the downloaded files.
- ```unix
-tar xf vbyi1n05chlbah2fmcuts5nwegyxyzxb.xz
-tar xf y5nke4x985rtt4li4t4xlue6lffndtq3.xz
-```
-6. Follow the following instructions to install NextClade and the MPXV dataset:
-    - [NextClade install instructions (platform specific)](https://docs.nextstrain.org/projects/nextclade/en/stable/user/nextclade-cli.html#download-from-command-line)
-    - Move the `nextclade` executable file into the unzipped `cecret_working_directory`.
-    ```unix
-    mv nextclade cecret_working_directory/
-    ```
-    - Download the NextStrain MPXV dataset (used to compare our own samples against later) into `cecret_working_directory` as well.
-    ```unix
-    cecret_working_directory/nextclade dataset get --name 'MPXV' --output-dir 'cecret_working_directory/data/monkeypox'
-    ```
-
-6. Configure Cecret if desired:
-    - This workflow uses [this reference genome](https://www.ncbi.nlm.nih.gov/nuccore/NC_063383) by default. To use a different reference genome, move its fasta file to `/PATH/TO/cecret_working_directory/fastas/`.
-7. Run the bash script `run_all.sh` within the GitHub repository using the command `bash run_all.sh`. Under the hood, this workflow will do the following things:
-    1. Use Python to generate a figure showing the genome coverage plotted against the coverage depth for each of your samples.
-    2. Use sbatch to submit a Slurm job [check with Zach: is it a single job or a job array?] to run Nextclade to assign lineages to your submitted samples. This will create a JSON output file.
-    3. If you included geographical metadata for your samples, Snakemake will use Python to generate a chart showing the geographic distribuion of the different lineages in your samples.
-8. Finally, take the JSON output from Nextclade (titled `nextclade.auspice.json`) and upload it to [Auspice.us](auspice.us) via drag & drop to visualize the lineage tree for your samples and see how they compare to other publicly available monkeypox virus samples. Scroll to the bottom to the filters and toggle "Filter by Node type" to "New"
-9. Coverage vs. Depth figure can be found in the monkeypox directory where the run_all.sh script was executed. The figure is titled: coverage_vs_depth_plot.png 
+3. Run the bash script `run_all.sh` within the GitHub repository using the command `bash run_all.sh`. This script will download example MPXV reads, assemble them, and perform a lineage analysis using Nextclade.
+4. Take the JSON output from Nextclade (located at `nextclade_output/nextclade.auspice.json`) and upload it to [Auspice.us](auspice.us) via drag & drop to visualize the lineage tree for your samples and see how they compare to other publicly available monkeypox virus samples. Scroll to the bottom to the filters and toggle "Filter by Node type" to "New".
+5. The genome coverage vs. coverage depth figure can be found in the monkeypox directory where the run_all.sh script was executed. The figure is titled `coverage_vs_depth_plot.png`
