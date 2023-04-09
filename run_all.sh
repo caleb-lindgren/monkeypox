@@ -7,7 +7,7 @@ wget https://byu.box.com/shared/static/y5nke4x985rtt4li4t4xlue6lffndtq3.xz
 tar xf vbyi1n05chlbah2fmcuts5nwegyxyzxb.xz
 tar xf y5nke4x985rtt4li4t4xlue6lffndtq3.xz
 
-# Install Nextclade, based on user OS
+# Install Nextclade for Linux
 CWD="$(pwd)"
 NEXTCLADE_WORKING_DIR="$CWD"/nextclade_working_directory
 NEXTCLADE_BINARY="$NEXTCLADE_WORKING_DIR"/nextclade
@@ -15,32 +15,9 @@ NEXTCLADE_MONKEYPOX_DATA="$NEXTCLADE_WORKING_DIR"/monkeypox
 
 mkdir -p "$NEXTCLADE_WORKING_DIR"
 
-echo "Please indicate your operating system:"
-echo "    1=Linux"
-echo "    2=macOS Intel"
-echo "    3=macOS Apple Silicon"
-read -p "Response: " USER_OS
+curl -fsSL "https://github.com/nextstrain/nextclade/releases/latest/download/nextclade-x86_64-unknown-linux-gnu" -o "$NEXTCLADE_BINARY" && chmod +x "$NEXTCLADE_BINARY"
 
-while true; do
-    case "$USER_OS" in
-        1)
-            curl -fsSL "https://github.com/nextstrain/nextclade/releases/latest/download/nextclade-x86_64-unknown-linux-gnu" -o "$NEXTCLADE_BINARY" && chmod +x "$NEXTCLADE_BINARY"
-            break
-            ;;
-        2)
-            curl -fsSL "https://github.com/nextstrain/nextclade/releases/latest/download/nextclade-x86_64-apple-darwin" -o "$NEXTCLADE_BINARY" && chmod +x "$NEXTCLADE_BINARY"
-            break
-            ;;
-        3)
-            curl -fsSL "https://github.com/nextstrain/nextclade/releases/latest/download/nextclade-aarch64-apple-darwin" -o "$NEXTCLADE_BINARY" && chmod +x "$NEXTCLADE_BINARY"
-            break
-            ;;
-        *)
-            read -p "Invalid response. Please enter 1, 2, or 3: " USER_OS
-            ;;
-    esac
-done
-
+# Download Nextclade global MPXV dataset
 "$NEXTCLADE_BINARY" dataset get --name 'MPXV' --output-dir "$NEXTCLADE_MONKEYPOX_DATA"
 
 # Set up Python environment
