@@ -60,6 +60,7 @@ fi
 echo $(pwd)
 cd "$CECRET_DIR"
 echo $(pwd)
+echo $(ls)
 
 export NXF_SINGULARITY_CACHEDIR="$CECRET_DIR"/singularity_images
 
@@ -70,6 +71,8 @@ sed -i "43s|TO_REPLACE|cecret|" "$CONFIG" # Output
 # Run cecret
 ./nextflow Cecret/main.nf \
    -c "$CONFIG"
+
+echo $(ls)
 
 cd "$CWD"
 cp -r "$CECRET_DIR"/cecret/* "$OUTPUT_DIR"

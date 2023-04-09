@@ -9,14 +9,14 @@
 
 CWD="$(pwd)"
 CECRET_OUTPUT_FOR_NEXTCLADE_DIR="$CWD"/cecret_output/consensus_fastas_for_nextclade
-MPXV_DATA_DIR="$CWD"/nextclade_working_directory/monkeypox
+MPXV_DATA_DIR="$CWD"/cecret_working_directory/data/monkeypox
 
 OUTPUT_DIR="$CWD"/nextclade_output
 mkdir -p "$OUTPUT_DIR"
 
 RUST_BACKTRACE=1
 
-nextclade_working_directory/nextclade run \
+cecret_working_directory/nextclade run \
    --input-dataset "$MPXV_DATA_DIR" \
    --output-all="$OUTPUT_DIR" \
    "$CECRET_OUTPUT_FOR_NEXTCLADE_DIR"/*.fa

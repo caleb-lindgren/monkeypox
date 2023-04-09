@@ -9,11 +9,9 @@ tar xf y5nke4x985rtt4li4t4xlue6lffndtq3.xz
 
 # Install Nextclade for Linux
 CWD="$(pwd)"
-NEXTCLADE_WORKING_DIR="$CWD"/nextclade_working_directory
-NEXTCLADE_BINARY="$NEXTCLADE_WORKING_DIR"/nextclade
-NEXTCLADE_MONKEYPOX_DATA="$NEXTCLADE_WORKING_DIR"/monkeypox
-
-mkdir -p "$NEXTCLADE_WORKING_DIR"
+CECRET_WORKING_DIR="$CWD"/cecret_working_directory
+NEXTCLADE_BINARY="$CECRET_WORKING_DIR"/nextclade
+NEXTCLADE_MONKEYPOX_DATA="$CECRET_WORKING_DIR"/data/monkeypox
 
 curl -fsSL "https://github.com/nextstrain/nextclade/releases/latest/download/nextclade-x86_64-unknown-linux-gnu" -o "$NEXTCLADE_BINARY" && chmod +x "$NEXTCLADE_BINARY"
 
