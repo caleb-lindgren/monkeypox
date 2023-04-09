@@ -31,12 +31,19 @@ Additionally, you will need internet access while you are logged in to the clust
 
 1. Log in to your high performance computing cluster. 
 2. Clone this GitHub repository ([https://github.com/caleb-lindgren/monkeypox](https://github.com/caleb-lindgren/monkeypox)) and enter the directory.
-```unix
-# https:
-git clone https://github.com/caleb-lindgren/monkeypox
-# ssh:
-git clone git@github.com:caleb-lindgren/monkeypox.git
 
+> Clone via HTTPS:
+
+```unix
+git clone https://github.com/caleb-lindgren/monkeypox
+```
+
+> Clone via SSH:
+
+```unix
+git clone git@github.com:caleb-lindgren/monkeypox.git
+```
+```unix
 cd monkeypox
 ```
 3. Run the bash script `run_all.sh` within the GitHub repository using the command `bash run_all.sh`. This script will download example MPXV reads, assemble them, and perform a lineage analysis using Nextclade.
