@@ -28,7 +28,6 @@ OUTPUT_FOR_NEXTCLADE_DIR="$ALL_OUTPUT_DIR"/consensus_fastas_for_nextclade
 
 mkdir -p "$ALL_OUTPUT_DIR"
 mkdir -p "$OUTPUT_DIR"
-mkdir -p "$OUTPUT_FOR_NEXTCLADE_DIR"
 
 CECRET_TMP_DIR=/tmp/d/"$ACC"
 rm -rf "$CECRET_TMP_DIR"
