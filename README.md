@@ -30,19 +30,21 @@ Additionally, you will need internet access while you are logged in to the clust
 ## Reproducibility challenge instructions
 
 1. Log in to your high performance computing cluster. 
-2. Clone this GitHub repository ([https://github.com/caleb-lindgren/monkeypox](https://github.com/caleb-lindgren/monkeypox)) and enter the directory.
+2. Clone this GitHub repository ([https://github.com/caleb-lindgren/monkeypox](https://github.com/caleb-lindgren/monkeypox)) and enter the directory. You can clone via HTTPS or via SSH:
 
-> Clone via HTTPS:
+Clone via HTTPS:
 
 ```unix
 git clone https://github.com/caleb-lindgren/monkeypox
 ```
 
-> Clone via SSH:
+Clone via SSH:
 
 ```unix
 git clone git@github.com:caleb-lindgren/monkeypox.git
 ```
+Enter the cloned directory:
+
 ```unix
 cd monkeypox
 ```
