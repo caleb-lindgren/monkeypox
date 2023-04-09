@@ -19,7 +19,7 @@ curl -fsSL "https://github.com/nextstrain/nextclade/releases/latest/download/nex
 "$NEXTCLADE_BINARY" dataset get --name 'MPXV' --output-dir "$NEXTCLADE_MONKEYPOX_DATA"
 
 # Download required Nextflow file
-NEXTFLOW_DOWNLOAD_DIR="~/.nextflow/framework/22.10.7/"
+NEXTFLOW_DOWNLOAD_DIR="$HOME"/.nextflow/framework/22.10.7/
 mkdir -p "$NEXTFLOW_DOWNLOAD_DIR"
 wget -P "$NEXTFLOW_DOWNLOAD_DIR" "https://www.nextflow.io/releases/v22.10.7/nextflow-22.10.7-one.jar"
 
