@@ -1,13 +1,18 @@
 #!/bin/bash
 
 # Download and extract Cecret and example reads
+echo "Downloading MPXV reads..."
 wget https://byu.box.com/shared/static/vbyi1n05chlbah2fmcuts5nwegyxyzxb.xz
+echo "Downloading Cecret..."
 wget https://byu.box.com/shared/static/y5nke4x985rtt4li4t4xlue6lffndtq3.xz
 
+echo "Extracting MPXV reads..."
 tar xf vbyi1n05chlbah2fmcuts5nwegyxyzxb.xz
+echo "Extracting Cecret..."
 tar xf y5nke4x985rtt4li4t4xlue6lffndtq3.xz
 
 # Install Nextclade for Linux
+echo "Installing Nextclade..."
 CWD="$(pwd)"
 CECRET_WORKING_DIR="$CWD"/cecret_working_directory
 NEXTCLADE_BINARY="$CECRET_WORKING_DIR"/nextclade
@@ -19,11 +24,13 @@ curl -fsSL "https://github.com/nextstrain/nextclade/releases/latest/download/nex
 "$NEXTCLADE_BINARY" dataset get --name 'MPXV' --output-dir "$NEXTCLADE_MONKEYPOX_DATA"
 
 # Download required Nextflow file
+echo "Installing Nextflow jar file..."
 NEXTFLOW_DOWNLOAD_DIR="$HOME"/.nextflow/framework/22.10.7/
 mkdir -p "$NEXTFLOW_DOWNLOAD_DIR"
 wget -P "$NEXTFLOW_DOWNLOAD_DIR" "https://www.nextflow.io/releases/v22.10.7/nextflow-22.10.7-one.jar"
 
 # Set up Python environment
+echo "Configuring Python environment..."
 module load miniconda3
 conda create --name mpxv python=3.8 matplotlib pandas seaborn -y
 conda activate mpxv
@@ -51,20 +58,21 @@ STEP_1_SCRIPT="$CWD/scripts/STEP_1_assemble_genomes.sh"
 sed -i "s/#SBATCH --array=.*$/#SBATCH --array=0-$(($NUM_INPUT-1))/" "$STEP_1_SCRIPT"
 
 # Run CECRET
+echo "Running Cecret..."
 sbatch "$STEP_1_SCRIPT"
 
 # Wait For Slurm
 
 while [ "$(ls "$CECRET_OUTPUT_FOR_NEXTCLADE_DIR" | tr ' ' '\n' | wc -l)" != "$NUM_INPUT" ]
 do
-        echo "$(ls "$CECRET_OUTPUT_FOR_NEXTCLADE_DIR" | tr ' ' '\n' | wc -l)"
-        sleep 1
+        sleep 10
 done
 
 # Generate Plots
+echo "Generating coverage vs. depth plot..."
 python "$CWD"/scripts/make_coverage_vs_depth_plot.py cecret_output
 
 # Run Nextclade
+echo "Running Nextclade..."
 sbatch "$CWD"/scripts/STEP_2_analyze_genome_lineages.sh
-
-echo 'started NextClade job'
+echo "Use squeue -u to check for Nextclade job completetion."
