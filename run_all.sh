@@ -47,9 +47,6 @@ done
 module load miniconda3
 conda create --name mpxv python=3.8 matplotlib pandas seaborn -y
 conda activate mpxv
-#pip install matplotlib
-#pip install pandas
-#pip install seaborn
 
 # Directory setup
 CECRET_OUTPUT_FOR_NEXTCLADE_DIR="$CWD"/cecret_output/consensus_fastas_for_nextclade
