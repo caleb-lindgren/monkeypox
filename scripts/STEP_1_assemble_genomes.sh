@@ -5,7 +5,7 @@
 #SBATCH --nodes=1   # number of nodes
 #SBATCH --mem-per-cpu=1024M   # memory per CPU core
 #SBATCH -J "cecret_%a"  # job name 
-#SBATCH --output=scripts/slurm_output/STEP_1_LOGS/slurm_%a.out
+#SBATCH --output=scripts/slurm_output/STEP_1/slurm_%a.out
 #SBATCH --array=0-149
 
 # Load modules
@@ -16,18 +16,18 @@ module load jdk/1.12
 mkdir -p /tmp/singularity/mnt/session
 
 # Data directories setup
-ALL_INPUT_DIR=extracted_sra_data
 CWD=$(pwd)
+ALL_INPUT_DIR=$CWD/extracted_sra_data
+ALL_OUTPUT_DIR=$CWD/cecret_output
 
 ACC=$(ls $ALL_INPUT_DIR | tr " " "\n" | head -$(($SLURM_ARRAY_TASK_ID + 1)) | tail -1)
-
 INPUT_DIR=$ALL_INPUT_DIR/$ACC
 
-ALL_OUTPUT_DIR=$CWD/scripts/slurm_output/STEP_1
-mkdir -p $ALL_OUTPUT_DIR
-
 OUTPUT_DIR=$ALL_OUTPUT_DIR/$ACC
-NEXTCLADE_DIR=scripts/slurm_output/consensus_fastas_for_nextclade
+NEXTCLADE_DIR=$ALL_OUTPUT_DIR/consensus_fastas_for_nextclade
+
+mkdir -p $ALL_OUTPUT_DIR
+mkdir -p $OUTPUT_DIR
 mkdir -p $NEXTCLADE_DIR
 
 CECRET_DIR=/tmp/d/$ACC
@@ -60,8 +60,6 @@ fi
 
 cd $CECRET_DIR
 export NXF_SINGULARITY_CACHEDIR=$CECRET_DIR/singularity_images
-
-mkdir -p $OUTPUT_DIR
 
 sed -i "40s|TO_REPLACE|reads|" $CONFIG # Paired reads 
 sed -i "41s|TO_REPLACE|single_reads|" $CONFIG # Single reads 
