@@ -57,7 +57,10 @@ else
     cp "$INPUT_DIR"/single/* "$CECRET_DIR"/single_reads
 fi
 
+echo $(pwd)
 cd "$CECRET_DIR"
+echo $(pwd)
+
 export NXF_SINGULARITY_CACHEDIR="$CECRET_DIR"/singularity_images
 
 sed -i "40s|TO_REPLACE|reads|" "$CONFIG" # Paired reads 
