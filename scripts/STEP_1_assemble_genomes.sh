@@ -48,7 +48,7 @@ else
 fi
 
 # Print the result
-echo "reads found in $INPUT_DIR/paired: $PAIRED_FOUND"
+echo "Paired reads found in $INPUT_DIR/paired: $PAIRED_FOUND"
 
 # Use the result for further processing
 if [ $PAIRED_FOUND = true ]; then
@@ -57,10 +57,7 @@ else
     cp "$INPUT_DIR"/single/* "$CECRET_DIR"/single_reads
 fi
 
-echo $(pwd)
 cd "$CECRET_DIR"
-echo $(pwd)
-echo $(ls)
 
 export NXF_SINGULARITY_CACHEDIR="$CECRET_DIR"/singularity_images
 
@@ -72,10 +69,8 @@ sed -i "43s|TO_REPLACE|cecret|" "$CONFIG" # Output
 ./nextflow Cecret/main.nf \
    -c "$CONFIG"
 
-echo $(ls)
-
 cd "$CWD"
 cp -r "$CECRET_DIR"/cecret/* "$OUTPUT_DIR"
 cp "$CECRET_DIR"/cecret/consensus/*consensus.fa "$OUTPUT_FOR_NEXTCLADE_DIR"
 
-echo "output completed :)"
+echo "Output completed :)"
