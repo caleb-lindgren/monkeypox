@@ -16,33 +16,33 @@ module load jdk/1.12
 mkdir -p /tmp/singularity/mnt/session
 
 # Data directories setup
-CWD=$(pwd)
-ALL_INPUT_DIR=$CWD/extracted_sra_data
-ALL_OUTPUT_DIR=$CWD/cecret_output
+CWD="$(pwd)"
+ALL_INPUT_DIR="$CWD"/extracted_sra_data
+ALL_OUTPUT_DIR="$CWD"/cecret_output
 
-ACC=$(ls $ALL_INPUT_DIR | tr " " "\n" | head -$(($SLURM_ARRAY_TASK_ID + 1)) | tail -1)
-INPUT_DIR=$ALL_INPUT_DIR/$ACC
+ACC="$(ls "$ALL_INPUT_DIR" | tr ' ' '\n' | head -$(($SLURM_ARRAY_TASK_ID + 1)) | tail -1)"
+INPUT_DIR="$ALL_INPUT_DIR"/"$ACC"
 
-OUTPUT_DIR=$ALL_OUTPUT_DIR/$ACC
-NEXTCLADE_DIR=$ALL_OUTPUT_DIR/consensus_fastas_for_nextclade
+OUTPUT_DIR="$ALL_OUTPUT_DIR"/"$ACC"
+OUTPUT_FOR_NEXTCLADE_DIR="$ALL_OUTPUT_DIR"/consensus_fastas_for_nextclade
 
-mkdir -p $ALL_OUTPUT_DIR
-mkdir -p $OUTPUT_DIR
-mkdir -p $NEXTCLADE_DIR
+mkdir -p "$ALL_OUTPUT_DIR"
+mkdir -p "$OUTPUT_DIR"
+mkdir -p "$OUTPUT_FOR_NEXTCLADE_DIR"
 
-CECRET_DIR=/tmp/d/$ACC
-rm -rf $CECRET_DIR
-mkdir -p $CECRET_DIR
+CECRET_TMP_DIR=/tmp/d/"$ACC"
+rm -rf "$CECRET_TMP_DIR"
+mkdir -p "$CECRET_TMP_DIR"
 
-cp -r cecret_working_directory $CECRET_DIR
-CECRET_DIR=$CECRET_DIR/cecret_working_directory
+cp -r cecret_working_directory "$CECRET_TMP_DIR"
+CECRET_DIR="$CECRET_TMP_DIR"/cecret_working_directory
 
 # Make a cecret.config file for this job
-CONFIG=$CECRET_DIR/cecret_$ACC.config
-cp $CECRET_DIR/cecret.config $CONFIG 
+CONFIG="$CECRET_DIR"/cecret_"$ACC".config
+cp "$CECRET_DIR"/cecret.config "$CONFIG" 
 
 # Check if the directory is empty
-if [ "$(ls -A $INPUT_DIR/paired)" ]; then
+if [ "$(ls -A "$INPUT_DIR"/paired)" ]; then
     PAIRED_FOUND=true
 else
     PAIRED_FOUND=false
@@ -53,24 +53,24 @@ echo "reads found in $INPUT_DIR/paired: $PAIRED_FOUND"
 
 # Use the result for further processing
 if [ $PAIRED_FOUND = true ]; then
-    cp $INPUT_DIR/paired/* $CECRET_DIR/reads
+    cp "$INPUT_DIR"/paired/* "$CECRET_DIR"/reads
 else
-    cp $INPUT_DIR/single/* $CECRET_DIR/single_reads
+    cp "$INPUT_DIR"/single/* "$CECRET_DIR"/single_reads
 fi
 
-cd $CECRET_DIR
-export NXF_SINGULARITY_CACHEDIR=$CECRET_DIR/singularity_images
+cd "$CECRET_DIR"
+export NXF_SINGULARITY_CACHEDIR="$CECRET_DIR"/singularity_images
 
-sed -i "40s|TO_REPLACE|reads|" $CONFIG # Paired reads 
-sed -i "41s|TO_REPLACE|single_reads|" $CONFIG # Single reads 
-sed -i "43s|TO_REPLACE|cecret|" $CONFIG # Output 
+sed -i "40s|TO_REPLACE|reads|" "$CONFIG" # Paired reads 
+sed -i "41s|TO_REPLACE|single_reads|" "$CONFIG" # Single reads 
+sed -i "43s|TO_REPLACE|cecret|" "$CONFIG" # Output 
 
 # Run cecret
 ./nextflow Cecret/main.nf \
-   -c $CONFIG
+   -c "$CONFIG"
 
-cd $CWD
-cp -r $CECRET_DIR/cecret/* $OUTPUT_DIR/
-cp $CECRET_DIR/cecret/consensus/*consensus.fa $NEXTCLADE_DIR/
+cd "$CWD"
+cp -r "$CECRET_DIR"/cecret/* "$OUTPUT_DIR"
+cp "$CECRET_DIR"/cecret/consensus/*consensus.fa "$OUTPUT_FOR_NEXTCLADE_DIR"
 
 echo "output completed :)"

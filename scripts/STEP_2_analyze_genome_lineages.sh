@@ -7,17 +7,18 @@
 #SBATCH -J "nextclade"  # job name 
 #SBATCH --output=scripts/slurm_output/STEP_2/
 
-NEXTCLADE_DIR=$(pwd)/scripts/slurm_output/concensus_fastas_for_nextclade
-OUTPUT_DIR=$(pwd)/scripts/slurm_output/STEP_2
-mkdir -p $OUTPUT_DIR
+CWD="$(pwd)"
+CECRET_OUTPUT_FOR_NEXTCLADE_DIR="$CWD"/cecret_output/consensus_fastas_for_nextclade
+MPXV_DATA_DIR="$CWD"/nextclade_working_directory/monkeypox
 
-cd cecret_working_directory
+OUTPUT_DIR="$CWD"/nextclade_output
+mkdir -p "$OUTPUT_DIR"
 
 RUST_BACKTRACE=1
 
-./nextclade run \
-   --input-dataset data/mpxv \
-   --output-all=$OUTPUT_DIR/ \
-   $NEXTCLADE_DIR/*.fa
+nextclade_working_directory/nextclade run \
+   --input-dataset "$MPXV_DATA_DIR" \
+   --output-all="$OUTPUT_DIR" \
+   "$CECRET_OUTPUT_FOR_NEXTCLADE_DIR"/*.fa
 
 echo "NEXTCLADE finished :)"

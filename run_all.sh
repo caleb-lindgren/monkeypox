@@ -8,8 +8,12 @@ tar xf vbyi1n05chlbah2fmcuts5nwegyxyzxb.xz
 tar xf y5nke4x985rtt4li4t4xlue6lffndtq3.xz
 
 # Install Nextclade, based on user OS
-CWD=$(pwd)
-NEXTCLADE_BINARY=$CWD/cecret_working_directory/nextclade
+CWD="$(pwd)"
+NEXTCLADE_WORKING_DIR="$CWD"/nextclade_working_directory
+NEXTCLADE_BINARY="$NEXTCLADE_WORKING_DIR"/nextclade
+NEXTCLADE_MONKEYPOX_DATA="$NEXTCLADE_WORKING_DIR"/monkeypox
+
+mkdir -p "$NEXTCLADE_WORKING_DIR"
 
 echo "Please indicate your operating system:"
 echo "    1=Linux"
@@ -18,17 +22,17 @@ echo "    3=macOS Apple Silicon"
 read -p "Response: " USER_OS
 
 while true; do
-    case $USER_OS in
+    case "$USER_OS" in
         1)
-            curl -fsSL "https://github.com/nextstrain/nextclade/releases/latest/download/nextclade-x86_64-unknown-linux-gnu" -o "$NEXTCLADE_BINARY" && chmod +x $NEXTCLADE_BINARY
+            curl -fsSL "https://github.com/nextstrain/nextclade/releases/latest/download/nextclade-x86_64-unknown-linux-gnu" -o "$NEXTCLADE_BINARY" && chmod +x "$NEXTCLADE_BINARY"
             break
             ;;
         2)
-            curl -fsSL "https://github.com/nextstrain/nextclade/releases/latest/download/nextclade-x86_64-apple-darwin" -o "nextclade" && chmod +x nextclade
+            curl -fsSL "https://github.com/nextstrain/nextclade/releases/latest/download/nextclade-x86_64-apple-darwin" -o "$NEXTCLADE_BINARY" && chmod +x "$NEXTCLADE_BINARY"
             break
             ;;
         3)
-            curl -fsSL "https://github.com/nextstrain/nextclade/releases/latest/download/nextclade-aarch64-apple-darwin" -o "nextclade" && chmod +x nextclade
+            curl -fsSL "https://github.com/nextstrain/nextclade/releases/latest/download/nextclade-aarch64-apple-darwin" -o "$NEXTCLADE_BINARY" && chmod +x "$NEXTCLADE_BINARY"
             break
             ;;
         *)
@@ -37,7 +41,7 @@ while true; do
     esac
 done
 
-$NEXTCLADE_BINARY dataset get --name 'MPXV' --output-dir 'cecret_working_directory/data/monkeypox'
+"$NEXTCLADE_BINARY" dataset get --name 'MPXV' --output-dir "$NEXTCLADE_MONKEYPOX_DATA"
 
 # Set up Python environment
 module load miniconda3
@@ -48,39 +52,41 @@ conda activate mpxv
 #pip install seaborn
 
 # Directory setup
-NEXTCLADE_OUTPUT_DIR=$CWD/cecret_output/consensus_fastas_for_nextclade/
-STEP_1_SLURM_OUTPUT_DIR=$CWD/scripts/slurm_output/STEP_1
-STEP_2_SLURM_OUTPUT_DIR=$CWD/scripts/slurm_output/STEP_2
+CECRET_OUTPUT_FOR_NEXTCLADE_DIR="$CWD"/cecret_output/consensus_fastas_for_nextclade
+STEP_1_SLURM_OUTPUT_DIR="$CWD"/slurm_output/STEP_1
+STEP_2_SLURM_OUTPUT_DIR="$CWD"/slurm_output/STEP_2
 
-rm -rf $NEXTCLADE_OUTPUT_DIR
-rm -rf $STEP_1_SLURM_OUTPUT_DIR
-rm -rf $STEP_2_SLURM_OUTPUT_DIR
+rm -rf "$CECRET_OUTPUT_FOR_NEXTCLADE_DIR"
+rm -rf "$STEP_1_SLURM_OUTPUT_DIR"
+rm -rf "$STEP_2_SLURM_OUTPUT_DIR"
 
-mkdir -p $STEP_1_SLURM_OUTPUT_DIR
-mkdir -p $STEP_2_SLURM_OUTPUT_DIR
+mkdir -p "$STEP_1_SLURM_OUTPUT_DIR"
+mkdir -p "$STEP_2_SLURM_OUTPUT_DIR"
 
 # Update step 1 job script to start correct number of array jobs
 
-INPUT_DIR=$CWD/extracted_sra_data/
-NUM_INPUT=$(ls $INPUT_DIR | tr ' ' '\n' | wc -l)
+INPUT_DIR="$CWD"/extracted_sra_data
+NUM_INPUT=$(ls "$INPUT_DIR" | tr ' ' '\n' | wc -l)
 
-STEP_1_SCRIPT=$CWD/scripts/STEP_1_assemble_genomes.sh
+STEP_1_SCRIPT="$CWD/scripts/STEP_1_assemble_genomes.sh"
 
-sed -i "s/#SBATCH --array=.*$/#SBATCH --array=0-$(($NUM_INPUT-1))/" $STEP_1_SCRIPT
+sed -i "s/#SBATCH --array=.*$/#SBATCH --array=0-$(($NUM_INPUT-1))/" "$STEP_1_SCRIPT"
 
 # Run CECRET
-sbatch $STEP_1_SCRIPT
+sbatch "$STEP_1_SCRIPT"
 
 # Wait For Slurm
 
-while [ "$(ls $NEXTCLADE_OUTPUT_DIR | tr ' ' '\n' | wc -l)" != "$NUM_INPUT" ]
+while [ "$(ls "$CECRET_OUTPUT_FOR_NEXTCLADE_DIR" | tr ' ' '\n' | wc -l)" != "$NUM_INPUT" ]
 do
-        echo "$(ls $NEXTCLADE_OUTPUT_DIR | tr ' ' '\n' | wc -l)"
+        echo "$(ls "$CECRET_OUTPUT_FOR_NEXTCLADE_DIR" | tr ' ' '\n' | wc -l)"
         sleep 1
 done
 
 # Generate Plots
-python scripts/make_coverage_vs_depth_plot.py cecret_output/
+python "$CWD"/scripts/make_coverage_vs_depth_plot.py cecret_output
 
 # Run Nextclade
-sbatch scripts/STEP_2_analyze_genome_lineages.sh
+sbatch "$CWD"/scripts/STEP_2_analyze_genome_lineages.sh
+
+echo 'started NextClade job'
