@@ -18,6 +18,11 @@ curl -fsSL "https://github.com/nextstrain/nextclade/releases/latest/download/nex
 # Download Nextclade global MPXV dataset
 "$NEXTCLADE_BINARY" dataset get --name 'MPXV' --output-dir "$NEXTCLADE_MONKEYPOX_DATA"
 
+# Download required Nextflow file
+NEXTFLOW_DOWNLOAD_DIR="~/.nextflow/framework/22.10.7/"
+mkdir -p "$NEXTFLOW_DOWNLOAD_DIR"
+wget -P "$NEXTFLOW_DOWNLOAD_DIR" "https://www.nextflow.io/releases/v22.10.7/nextflow-22.10.7-one.jar"
+
 # Set up Python environment
 module load miniconda3
 conda create --name mpxv python=3.8 matplotlib pandas seaborn -y
