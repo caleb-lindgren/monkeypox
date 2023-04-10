@@ -67,7 +67,11 @@ sbatch "$STEP_1_SCRIPT"
 
 while [ "$(ls "$CECRET_OUTPUT_FOR_NEXTCLADE_DIR" | tr ' ' '\n' | wc -l)" != "$NUM_INPUT" ]
 do
-        sleep 10
+    count=$(ls -1 "$CECRET_OUTPUT_FOR_NEXTCLADE_DIR" | wc -l)
+    progress=$(awk "BEGIN {printf \"%.0f\n\",($count/"$NUM_INPUT")*100}")
+    bar=$(seq -s "#" $progress | sed 's/[0-9]//g')
+    echo -ne "[$bar] ($count/$NUM_INPUT)\r"
+    sleep 10
 done
 
 # Generate Plots
