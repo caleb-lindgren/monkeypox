@@ -23,11 +23,13 @@ curl -fsSL "https://github.com/nextstrain/nextclade/releases/latest/download/nex
 # Download Nextclade global MPXV dataset
 "$NEXTCLADE_BINARY" dataset get --name 'MPXV' --output-dir "$NEXTCLADE_MONKEYPOX_DATA"
 
-# Download required Nextflow file
-echo "Installing Nextflow jar file..."
-NEXTFLOW_DOWNLOAD_DIR="$HOME"/.nextflow/framework/22.10.7/
-mkdir -p "$NEXTFLOW_DOWNLOAD_DIR"
-wget -P "$NEXTFLOW_DOWNLOAD_DIR" "https://www.nextflow.io/releases/v22.10.7/nextflow-22.10.7-one.jar"
+# Download required Nextflow files
+echo "Installing Nextflow dependencies..."
+wget "https://byu.box.com/shared/static/9gnl5qnbzxvtj31eoxkkbi0i2ulswe1f.xz"
+
+echo "Extracting Nextflow dependencies..."
+tar xf "9gnl5qnbzxvtj31eoxkkbi0i2ulswe1f.xz"
+mv .nextflow "$HOME"
 
 # Set up Python environment
 echo "Configuring Python environment..."
