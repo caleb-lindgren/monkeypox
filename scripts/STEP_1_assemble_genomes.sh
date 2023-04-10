@@ -4,7 +4,7 @@
 #SBATCH --ntasks=8   # number of processor cores (i.e. tasks)
 #SBATCH --nodes=1   # number of nodes
 #SBATCH --mem-per-cpu=1024M   # memory per CPU core
-#SBATCH -J cecret_%a  # job name 
+#SBATCH -J "cecret"  # job name 
 #SBATCH --output=slurm_output/STEP_1/slurm_%a.out
 #SBATCH --array=0-149
 
