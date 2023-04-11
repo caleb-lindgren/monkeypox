@@ -1,0 +1,24 @@
+Virus detail
+Virus name:	hMpxV/USA/PA-CDC-0016/2022
+Accession ID:	EPI_ISL_15016116
+Clade / Lineage	IIb A.2.2
+AA Substitutions	A7L M357I, A11L N98D, A14L T17A, A19R D29N, A19R K62E, A19R K435E, A19R Q243R, A24R L307S, A24R S43L, A27L H264Y, A28L D372del, A28L D373del, A28L D374del, A28L D375del, A45L G11R, A45L S44L, A47R Q22stop, A47R Y221H, A50R D442N, B4R G349S, B4R H120Y, B6R P221S, B9R F263L, B17R H165Y, B17R R689C, B21R D1877N, B21R I1741M, B21R N209D, B21R S722P, C3L F36S, C9L C48R, C9L D187N, C15L G38E, C15L S78P, C18L K125E, C18L R38C, C19L K353E, D7L S318F, D9L D160N, D9L D423A, D13L D13N, E1R E553K, E1R V528I, E10R H198Y, F8L F108L, F9R N56D, G1L S394F, G8L N196D, G9R L30S, G9R N88D, G10R I142M, H4L Y740H, J1L L105S, J1R N264D, J2L F54S, J2R F54S, J3L N264D, J3R L105S, L6R L734S, M4R K162E, O1L S148L, P2L E162K
+Passage details/history:	Original
+Sample information
+Collection date:	2022-07
+Location:	North America / USA / Pennsylvania
+Host:	Human
+Additional location information:	
+Gender:	unknown
+Patient age:	unknown
+Patient status:	unknown
+Specimen source:	lesion swab
+Additional host information:	
+Sampling strategy:	
+Outbreak:	
+Last vaccinated:	
+Treatment:	
+Sequencing technology:	Illumina NovaSeq 6000
+Assembly method:	ivar 0.1; samtools 1.7; bwa 0.7.17; SPAdes 3.13.0
+Coverage:	
+Comment:	A47R_Q22stop results in 91.2% truncation of the protein sequence. Insertion of 53 nucleotides when compared to the reference sequence. Gap of 27 nucleotides when compared to the reference sequence.

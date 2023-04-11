@@ -45,11 +45,11 @@ df = pd.DataFrame({
     "Accession ID": ids,
     "Virus Name": names,
     "Collection Date": pd.to_datetime(dates),
-    "state": locs,
+    "State": locs,
     "Lineage": lineages,
     "AA Substitutions": sample_subs,
 }).\
-sort_values(by=["state", "Lineage"]).\
+sort_values(by=["State", "Lineage"]).\
 reset_index(drop=True)
 
 df.to_csv("gisaid_parsed.tsv", sep="\t", index=False)

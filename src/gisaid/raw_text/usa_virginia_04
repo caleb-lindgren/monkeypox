@@ -1,0 +1,24 @@
+Virus detail
+Virus name:	hMpxV/USA/VA-DPH-B969962RERE/2022
+Accession ID:	EPI_ISL_15384416
+Clade / Lineage	IIb B.1
+AA Substitutions	B19R P69S, D11L R108C, L6R E478K, M4R S188F
+Passage details/history:	Original
+Sample information
+Collection date:	2022-07-17
+Location:	North America / USA / Virginia
+Host:	Human
+Additional location information:	
+Gender:	Male
+Patient age:	36
+Patient status:	unknown
+Specimen source:	swab of lesion on nose
+Additional host information:	
+Sampling strategy:	
+Outbreak:	
+Last vaccinated:	
+Treatment:	
+Sequencing technology:	Illumina
+Assembly method:	BWA v. 0.7.17-r1188; iVar v. 1.3.1
+Coverage:	
+Comment:	Long stretches of NNNs (6.46% of overall sequence). Insertion of 17 nucleotides when compared to the reference sequence. C14L without BLAST coverage. E7R without BLAST coverage. H5R without BLAST coverage. B15L without BLAST coverage. A47R without BLAST coverage.

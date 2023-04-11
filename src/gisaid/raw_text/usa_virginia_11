@@ -1,0 +1,24 @@
+Virus detail
+Virus name:	hMpxV/USA/VA-CDC-001/2022
+Accession ID:	EPI_ISL_13096615
+Clade / Lineage	IIb A.2
+AA Substitutions	A11L N98D, A14L T17A, A19R D29N, A19R K62E, A19R K435E, A19R Q243R, A24R L307S, A25R E511K, A27L D551N, A28L D372del, A28L D373del, A28L D374del, A45L S44L, A47R Q22stop, A47R Y221H, A50R D442N, B4R H120Y, B6R P221S, B9R F263L, B16R E27K, B17R R689C, B21R I1741M, B21R N209D, B21R S722P, C3L F36S, C9L C48R, C9L D187N, C15L G38E, C15L S78P, C18L K125E, C19L K353E, C23R S52L, D7L R268stop, D9L D55N, D9L D423A, D9L M540I, D10L D51N, D13L D13N, E1R E553K, F8L F108L, F9R N56D, G8L N196D, G9R L30S, G9R N88D, G10R I142M, H4L Y740H, J1L L105S, J1R N264D, J2L F54S, J2R F54S, J3L N264D, J3R L105S, L6R L734S, M2R D10N, M4R K162E
+Passage details/history:	Original
+Sample information
+Collection date:	2022-05
+Location:	North America / USA / Virginia
+Host:	Human
+Additional location information:	
+Gender:	unknown
+Patient age:	unknown
+Patient status:	unknown
+Specimen source:	
+Additional host information:	
+Sampling strategy:	
+Outbreak:	
+Last vaccinated:	
+Treatment:	
+Sequencing technology:	Oxford Nanopore Technologies
+Assembly method:	minimap2 v. 2.16; ivar v. 0.1; samtools v. 1.7; medaka v. 1.0.1; flye v. 2.9
+Coverage:	28x
+Comment:	D7L_R268stop results in 59.5% truncation of the protein sequence. A47R_Q22stop results in 91.2% truncation of the protein sequence. Gap of 7 nucleotide(s) found at refpos 136523 (FRAMESHIFT). Gap of 7 nucleotide(s) found at refpos 148539 (FRAMESHIFT). Gap of 7 nucleotide(s) found at refpos 175226 (FRAMESHIFT). Insertion of 27 nucleotides when compared to the reference sequence. Gap of 35 nucleotides when compared to the reference sequence.
