@@ -29,6 +29,19 @@ Additionally, you will need internet access while you are logged in to the clust
 
 ## Reproducibility challenge instructions
 
+These instructions send a set of example reads through the data pipeline. In order to use the pipeline with reads from your own samples, first follow the instructions below to run the pipeline with the example reads, just to make sure everything works properly on your system. Then, replace the child directories within the `extracted_sra_data/` directory with new child directories containing the single or paired reads from your own samples. You should create one child directory for each of your samples. The name of the each child directory should be the corresponding sample ID, and paired and/or single reads should be organized in child directories within it as follows:
+```
+extracted_sra_data/
+├── <SAMPLE_ID>
+│   ├── paired
+│   │   ├── <SAMPLE_ID>_1.fastq
+│   │   └── <SAMPLE_ID>_2.fastq
+│   └── single
+│       └── <SAMPLE_ID>.fastq
+├── <SAMPLE_ID>
+...
+```
+
 1. Log in to your high performance computing cluster. 
 2. Clone this GitHub repository ([https://github.com/caleb-lindgren/monkeypox](https://github.com/caleb-lindgren/monkeypox)) and enter the directory. You can clone via HTTPS or via SSH:
 
