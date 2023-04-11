@@ -27,20 +27,9 @@ This workflow was developed on a high performance computing cluster with the fol
     
 Additionally, you will need internet access while you are logged in to the cluster, but computing jobs that you run on the cluster will not require internet access. 
 
-## Reproducibility challenge instructions
+## Instructions for use
 
-These instructions send a set of example reads through the data pipeline. In order to use the pipeline with reads from your own samples, first follow the instructions below to run the pipeline with the example reads, just to make sure everything works properly on your system. Then, replace the child directories within the `extracted_sra_data/` directory with new child directories containing the single or paired reads from your own samples. You should create one child directory for each of your samples. The name of the each child directory should be the corresponding sample ID, and paired and/or single reads should be organized in child directories within it as follows:
-```
-extracted_sra_data/
-├── <SAMPLE_ID>
-│   ├── paired
-│   │   ├── <SAMPLE_ID>_1.fastq
-│   │   └── <SAMPLE_ID>_2.fastq
-│   └── single
-│       └── <SAMPLE_ID>.fastq
-├── <SAMPLE_ID>
-...
-```
+First, download the pipeline and run it on our example dataset to ensure that everything is functioning properly on your system:
 
 1. Log in to your high performance computing cluster. 
 2. Clone this GitHub repository ([https://github.com/caleb-lindgren/monkeypox](https://github.com/caleb-lindgren/monkeypox)) and enter the directory. You can clone via HTTPS or via SSH:
@@ -70,3 +59,18 @@ bash run_all.sh
 This script will download example MPXV reads, assemble them, and perform a lineage analysis using Nextclade. Figures 2 and 3 will be generated and can be found in the `plots_output/` directory.
 
 4. Take the JSON output from Nextclade (located at `nextclade_output/nextclade.auspice.json`) and upload it to [Auspice.us](https://auspice.us/) via drag & drop. This allows you to visualize the lineage tree for your samples and see how they compare to other publicly available monkeypox virus samples. Scroll to the bottom to the filters and toggle "Filter by Node type" to "New". Once visible, the Auspice interface allows for downloading images of the figure.
+
+Now you are ready to process reads from your own samples. To do so, replace the child directories within the `extracted_sra_data/` directory with new child directories containing the single or paired reads from your own samples. You should create one child directory for each of your samples. The name of the each child directory should be the corresponding sample ID, and paired and/or single reads should be organized in child directories within it as follows:
+```
+extracted_sra_data/
+├── <SAMPLE_ID>
+│   ├── paired
+│   │   ├── <SAMPLE_ID>_1.fastq
+│   │   └── <SAMPLE_ID>_2.fastq
+│   └── single
+│       └── <SAMPLE_ID>.fastq
+├── <SAMPLE_ID>
+...
+```
+
+Then, follow the same steps above to process your data.
