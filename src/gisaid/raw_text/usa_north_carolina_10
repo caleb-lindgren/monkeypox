@@ -1,0 +1,24 @@
+Virus detail
+Virus name:	hMpxV/USA/NC-UNC-0001/2022
+Accession ID:	EPI_ISL_15076198
+Clade / Lineage	IIb B.1.2
+AA Substitutions	A29L A92T, B17R D170E, B21R D1604N, C9L C48R, C17L V213I, D9L D423A, E4R H187Q, I6L G97S, N2R P43A
+Passage details/history:	Original
+Sample information
+Collection date:	2022-07-07
+Location:	North America / USA / North Carolina
+Host:	Human
+Additional location information:	
+Gender:	unknown
+Patient age:	unknown
+Patient status:	unknown
+Specimen source:	Lesion swab
+Additional host information:	
+Sampling strategy:	
+Outbreak:	
+Last vaccinated:	
+Treatment:	
+Sequencing technology:	Nanopore
+Assembly method:	Mortar v. 1.0
+Coverage:	51003.0
+Comment:	Long stretches of NNNs (6.21% of overall sequence). Insertion of 21 nucleotides when compared to the reference sequence. Gap of 12 nucleotides when compared to the reference sequence. B15L without BLAST coverage. A33R without BLAST coverage. C14L without BLAST coverage. E7R without BLAST coverage.

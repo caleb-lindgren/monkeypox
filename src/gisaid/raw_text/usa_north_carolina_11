@@ -1,0 +1,24 @@
+Virus detail
+Virus name:	hMpxV/USA/NC-UNC-0022/2022
+Accession ID:	EPI_ISL_15076197
+Clade / Lineage	IIb B.1.2
+AA Substitutions	A50R D320del, A50R D325T, A50R D328T, A50R E308N, A50R F317del, A50R F319del, A50R F324L, A50R F327Y, A50R G302V, A50R G326V, A50R H304T, A50R I303Y, A50R K306R, A50R L301stop, A50R L316V, A50R L322S, A50R M314del, A50R M329L, A50R N311T, A50R N313T, A50R S312L, A50R T330M, A50R V318del, A50R Y309I, B21R D1604N, C9L C48R, C18L E379K
+Passage details/history:	Original
+Sample information
+Collection date:	2022-08-30
+Location:	North America / USA / North Carolina
+Host:	Human
+Additional location information:	
+Gender:	Male
+Patient age:	unknown
+Patient status:	unknown
+Specimen source:	Lesion swab
+Additional host information:	
+Sampling strategy:	
+Outbreak:	
+Last vaccinated:	
+Treatment:	
+Sequencing technology:	unknown
+Assembly method:	
+Coverage:	
+Comment:	Stretches of NNNs (4.15% of overall sequence). A50R_L301stop results in 46.3% truncation of the protein sequence. Insertion of 277 nucleotides when compared to the reference sequence. Gap of 18 nucleotides when compared to the reference sequence. B15L without BLAST coverage.

@@ -1,0 +1,24 @@
+Virus detail
+Virus name:	hMpxV/USA/NC-CDC-0009/2022
+Accession ID:	EPI_ISL_15455861
+Clade / Lineage	IIb B.1.7
+AA Substitutions	A6R S38F, A28L ins371D, A38R S7L, C3L E42K
+Passage details/history:	Original
+Sample information
+Collection date:	2022-07
+Location:	North America / USA / North Carolina
+Host:	Human
+Additional location information:	
+Gender:	unknown
+Patient age:	unknown
+Patient status:	unknown
+Specimen source:	Lesion swab
+Additional host information:	
+Sampling strategy:	
+Outbreak:	
+Last vaccinated:	
+Treatment:	
+Sequencing technology:	Illumina NovaSeq 6000
+Assembly method:	ivar 0.1; samtools 1.7; bwa 0.7.17; SPAdes 3.13.0
+Coverage:	
+Comment:	Insertion of 20 nucleotides when compared to the reference sequence. Gap of 18 nucleotides when compared to the reference sequence.
