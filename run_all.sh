@@ -77,6 +77,14 @@ done
 # Generate Plots
 echo "Generating coverage vs. depth plot..."
 python "$CWD"/scripts/make_coverage_vs_depth_plot.py cecret_output
+python "$CWD"/src/gisaid/fig2.py
+
+# Make a plots output directory and move plots to it
+PLOTS_OUTPUT_DIR="$CWD"/plots_output
+mkdir -p "$PLOTS_OUTPUT_DIR"
+
+mv "$CWD"/src/gisaid/figure_2.png "$PLOTS_OUTPUT_DIR"
+mv "$CWD"/coverage_vs_depth_plot.png "$PLOTS_OUTPUT_DIR"/figure_3.png
 
 # Run Nextclade
 echo "Running Nextclade..."
