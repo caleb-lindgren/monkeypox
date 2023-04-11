@@ -56,5 +56,5 @@ bash run_all.sh
 
 This script will download example MPXV reads, assemble them, and perform a lineage analysis using Nextclade.
 
-4. Take the JSON output from Nextclade (located at `nextclade_output/nextclade.auspice.json`) and upload it to [Auspice.us](auspice.us) via drag & drop to visualize the lineage tree for your samples and see how they compare to other publicly available monkeypox virus samples. Scroll to the bottom to the filters and toggle "Filter by Node type" to "New".
+4. Take the JSON output from Nextclade (located at `nextclade_output/nextclade.auspice.json`) and upload it to [Auspice.us](https://auspice.us/) via drag & drop. This allows you to visualize the lineage tree for your samples and see how they compare to other publicly available monkeypox virus samples. Scroll to the bottom to the filters and toggle "Filter by Node type" to "New". Once visible, the Auspice interface allows for downloading images of the figure.
 5. The genome coverage vs. coverage depth figure can be found in the monkeypox directory where the run_all.sh script was executed. The figure is titled `coverage_vs_depth_plot.png`
