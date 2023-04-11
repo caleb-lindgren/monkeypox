@@ -18,12 +18,11 @@ This workflow was developed on a high performance computing cluster with the fol
 
 - Red Hat Enterprise Linux Server 7.9
 - Slurm 22.05.7
+- miniconda3/conda 23.3.1
 - wget 1.14
-- Python 3
-    - Seaborn
-    - Matplotlib
-    - Numpy
-    - Pandas
+- tar 1.26
+- xz 5.2.2
+- GNU sed 4.2.2
     
 Additionally, you will need internet access while you are logged in to the cluster, but computing jobs that you run on the cluster will not require internet access. 
 

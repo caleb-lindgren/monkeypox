@@ -52,12 +52,12 @@ background = alt.Chart().mark_geoshape(
     from_=alt.LookupData(data=states, key="id"),
     as_="geo",
 ).properties(
-    width=500,
-    height=300
+    width=1500,
+    height=900
 ).project(
     type="albersUsa"
 )
 
-chart = alt.layer(background, foreground, data=source)#.facet("Lineage:N", columns=2)
+chart = alt.layer(background, foreground, data=source)
 
-chart.save("map.png", method="selenium", scale_factor=2)
+chart.save("interactive.html")
