@@ -81,4 +81,3 @@ python "$CWD"/scripts/make_coverage_vs_depth_plot.py cecret_output
 # Run Nextclade
 echo "Running Nextclade..."
 sbatch "$CWD"/scripts/STEP_2_analyze_genome_lineages.sh
-echo "Use squeue -u to check for Nextclade job completetion."
