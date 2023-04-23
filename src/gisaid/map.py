@@ -15,11 +15,6 @@ read_csv("gisaid_parsed.tsv", sep="\t")
 
 df = df.assign(Lineage=df["Lineage"].fillna("No data"))
 
-#df = df[["State", "Lineage", "Collection Date"]].\
-#groupby(["State", "Lineage"]).\
-#count().\
-#reset_index(drop=False)
-
 df = df[["State", "Lineage", "Collection Date"]].\
 reset_index(drop=False)
 
