@@ -38,8 +38,6 @@ for sample_dir in sample_dirs:
     else:
         empty_count += 1
 
-#print(f"{empty_count} of {all_count} input directories were empty.")
-
 all_summary = pd.DataFrame({
     "accession": samples,
     "depth": depths,
@@ -47,6 +45,16 @@ all_summary = pd.DataFrame({
     "perc_kept": perc_kepts,
 })
 
-ax = sns.scatterplot(data=all_summary, x="coverage", y="depth")
-ax.set(xlabel="MPXV genome coverage (%)", ylabel="Depth of coverage (mean number of reads)")
-plt.savefig("figure_3.png", dpi=300)
+chart = alt.Chart(all_summary).mark_circle().encode(
+    x=alt.X(
+        "coverage",
+        title="MPXV genome coverage (%)",
+        scale=alt.Scale(zero=False),
+    ),
+    y=alt.Y(
+        "depth",
+        title="Depth of coverage (mean number of reads)",
+    ),
+)
+
+chart.save("coverage_vs_depth.html")

@@ -34,7 +34,7 @@ mv .nextflow "$HOME"
 # Set up Python environment
 echo "Configuring Python environment..."
 module load miniconda3
-conda create --name mpxv python=3.8 matplotlib pandas seaborn -y
+conda create --name mpxv python=3.8 matplotlib pandas altair altair-saver -y
 conda activate mpxv
 
 # Directory setup
