@@ -1,7 +1,6 @@
-import matplotlib.pyplot as plt
+import altair as alt
 import os
 import pandas as pd
-import seaborn as sns
 import sys
 
 """
@@ -55,6 +54,7 @@ chart = alt.Chart(all_summary).mark_circle().encode(
         "depth",
         title="Depth of coverage (mean number of reads)",
     ),
+    tooltip="accession",
 )
 
 chart.save("coverage_vs_depth.html")
