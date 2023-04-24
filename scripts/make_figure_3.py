@@ -44,7 +44,7 @@ all_summary = pd.DataFrame({
     "perc_kept": perc_kepts,
 })
 
-chart = alt.Chart(all_summary).mark_circle().encode(
+chart = alt.Chart(all_summary).mark_circle(size=60).encode(
     x=alt.X(
         "coverage",
         title="MPXV genome coverage (%)",
@@ -57,12 +57,10 @@ chart = alt.Chart(all_summary).mark_circle().encode(
     tooltip="accession",
 ).properties(
     height=800,
-    width=800,
+    width=1000,
 ).configure_axis(
     labelFontSize=18,
     titleFontSize=18,
-).configure_mark(
-    size=45,
 )
 
 chart.save("coverage_vs_depth.html")
