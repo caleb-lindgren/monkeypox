@@ -55,6 +55,9 @@ chart = alt.Chart(all_summary).mark_circle().encode(
         title="Depth of coverage (mean number of reads)",
     ),
     tooltip="accession",
+).properties(
+    height=1200,
+    width=800,
 )
 
 chart.save("coverage_vs_depth.html")
