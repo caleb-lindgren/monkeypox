@@ -56,8 +56,13 @@ chart = alt.Chart(all_summary).mark_circle().encode(
     ),
     tooltip="accession",
 ).properties(
-    height=1200,
+    height=800,
     width=800,
+).configure_axis(
+    labelFontSize=18,
+    titleFontSize=18,
+).configure_mark(
+    size=45,
 )
 
 chart.save("coverage_vs_depth.html")
